@@ -71,3 +71,24 @@ def test_daily_log_chains_to_same_answer():
         pa = {i["ticker"]: i["points"] for i in a[k]["items"]}
         for i in b[k]["items"]:
             assert pa[i["ticker"]] == pytest.approx(i["points"], abs=max(1.0, 0.01 * abs(i["points"]))), (k, i["ticker"])
+
+
+def test_rerun_same_evening_replaces_latest_day():
+    """A second run after the close recomputes the latest day with corrected prices
+    instead of skipping it, and leaves no duplicate rows."""
+    adj, level, seeds, _, _ = _inputs()
+    T, S = pd.Timestamp("2026-10-21"), pd.Timestamp("2026-10-14")
+    w = seeds[T] * adj.loc[S, seeds[T].index] / adj.loc[T, seeds[T].index]
+    seeds14 = {S: w / w.sum()}
+    days = [d for d in level.index if S < d <= T]
+    log, idx, _ = A.log_days(adj, level, seeds14, days)
+
+    adj2 = adj.copy()
+    adj2.loc[T, "NVDA"] *= 1.01                      # a corrected close for the latest day
+    kept, kept_idx = build.trim_log(log, idx, T)
+    assert pd.to_datetime(kept["date"]).max() < T and len(kept_idx) == len(idx) - 1
+    redo, redo_idx, problems = A.log_days(adj2, level, seeds14, [T])
+    merged = pd.concat([kept, redo], ignore_index=True)
+    assert not problems and len(merged) == len(log)
+    pick = lambda df: df[(df["date"] == "2026-10-21") & (df["ticker"] == "NVDA")]["points"]
+    assert len(pick(merged)) == 1 and pick(merged).iloc[0] > pick(log).iloc[0]

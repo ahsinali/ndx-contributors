@@ -41,6 +41,12 @@ def load_log(folder: Path):
     return log, idx
 
 
+def trim_log(log: pd.DataFrame, idx_log: pd.DataFrame, T: pd.Timestamp):
+    """Drop logged days on or after close T so they are recomputed from current prices."""
+    keep = lambda df: df[pd.to_datetime(df["date"]) < T].reset_index(drop=True) if not df.empty else df
+    return keep(log), keep(idx_log)
+
+
 def load_fixture(folder: Path):
     close = pd.read_csv(folder / "close.csv", index_col=0, parse_dates=True)
     opens = pd.read_csv(folder / "open.csv", index_col=0, parse_dates=True)
@@ -74,8 +80,10 @@ def run(out: Path, fixture: Path | None = None, write_log: bool = True, now: dt.
     opens = opens.reindex(index=grid)
     adj, spin_applied = A.adjust_for_spins(close, opens, spins)
 
-    # append newly closed days to the log
+    # Log newly closed days. The latest close is always recomputed, so a later run the same
+    # evening replaces the first run's numbers with any corrected closing prices.
     L = min(seeds)
+    log, idx_log = trim_log(log, idx_log, T)
     last = pd.Timestamp(log["date"].max()) if not log.empty else L
     todo = [d for d in level.index if last < d <= T]
     new_idx = pd.DataFrame()

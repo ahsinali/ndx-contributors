@@ -2,7 +2,14 @@ name: Update dashboard
 
 on:
   schedule:
-    - cron: "15 22 * * 1-5"   # 22:15 UTC weekdays = 6:15pm EDT / 5:15pm EST, after the US close
+    # GitHub cron is UTC with no daylight saving, so three runs cover both seasons:
+    #   20:35 UTC = 4:35pm EDT (publishes)      / 3:35pm EST (market open: shows prior close)
+    #   21:35 UTC = 5:35pm EDT (corrections)    / 4:35pm EST (publishes)
+    #   22:35 UTC = 6:35pm EDT (backstop)       / 5:35pm EST (corrections)
+    # Each run recomputes the latest close, so later runs pick up corrected prices.
+    - cron: "35 20 * * 1-5"
+    - cron: "35 21 * * 1-5"
+    - cron: "35 22 * * 1-5"
   workflow_dispatch:
   push:
     branches: [main]

@@ -9,12 +9,14 @@ for the top 50 contributors.
 
 ## How it updates
 
-`.github/workflows/update.yml` runs every weekday at 22:15 UTC (after the US close), and on
-every push to `main`:
+`.github/workflows/update.yml` runs on weekdays at 20:35, 21:35 and 22:35 UTC, and on every push to
+`main`. GitHub's schedule is in UTC with no daylight saving, so the first post-close run is 4:35pm ET
+year-round (20:35 UTC in summer, 21:35 UTC in winter); later runs recompute the latest close to pick up
+any price corrections. Each run:
 
 1. Runs the engine tests (`tests/`, offline fixture of real Oct 2026 closes).
 2. Pulls ~15 months of closes for every member plus `^NDX` from Yahoo Finance.
-3. Appends each newly closed day's contributions to `data/log/` and commits it.
+3. Recomputes the latest close and appends any newly closed days to `data/log/`, then commits it.
 4. Rebuilds the page and publishes it to GitHub Pages.
 5. Fails the `reconcile` job (so GitHub notifies you) if the contributions don't add up to the
    index move within 5 bp, or if prices are missing or stale. The page still publishes, with a
