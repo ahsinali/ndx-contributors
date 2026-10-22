@@ -133,6 +133,9 @@ def run(out: Path, fixture: Path | None = None, write_log: bool = True, now: dt.
              "spinAdjustments": spin_applied, "source": "fixture" if fixture else "Yahoo Finance"}]
     data = {"meta": meta, "index_moves": moves, "contributions": contrib}
     render(data, out)
+    if write_log:
+        top = {k: [{"ticker": c["ticker"], "points": c["points"]} for c in contrib if c["period"] == k][:5] for k in order}
+        (ROOT / "data/latest.json").write_text(json.dumps({"meta": meta[0], "index_moves": moves, "top5": top}, indent=1))
     return data
 
 

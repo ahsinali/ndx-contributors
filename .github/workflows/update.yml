@@ -39,9 +39,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/log
+          git add data/log data/latest.json
           if ! git diff --cached --quiet; then
-            git commit -m "data: contributions through $(date -u +%F) [skip ci]"
+            git commit -m "data: update through latest close [skip ci]"
             git push
           fi
       - uses: actions/configure-pages@v5
