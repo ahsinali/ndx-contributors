@@ -1,0 +1,406 @@
+{
+ "NVDA": {
+  "name": "Nvidia",
+  "entered": null
+ },
+ "AAPL": {
+  "name": "Apple",
+  "entered": null
+ },
+ "MSFT": {
+  "name": "Microsoft",
+  "entered": null
+ },
+ "AMZN": {
+  "name": "Amazon",
+  "entered": null
+ },
+ "GOOGL": {
+  "name": "Alphabet A",
+  "entered": null
+ },
+ "SPCX": {
+  "name": "SpaceX",
+  "entered": "2026-07-07"
+ },
+ "GOOG": {
+  "name": "Alphabet C",
+  "entered": null
+ },
+ "META": {
+  "name": "Meta Platforms",
+  "entered": null
+ },
+ "AVGO": {
+  "name": "Broadcom",
+  "entered": null
+ },
+ "TSLA": {
+  "name": "Tesla",
+  "entered": null
+ },
+ "MU": {
+  "name": "Micron",
+  "entered": null
+ },
+ "WMT": {
+  "name": "Walmart",
+  "entered": "2026-01-20"
+ },
+ "AMD": {
+  "name": "AMD",
+  "entered": null
+ },
+ "ASML": {
+  "name": "ASML",
+  "entered": null
+ },
+ "INTC": {
+  "name": "Intel",
+  "entered": null
+ },
+ "PLTR": {
+  "name": "Palantir",
+  "entered": null
+ },
+ "COST": {
+  "name": "Costco",
+  "entered": null
+ },
+ "CSCO": {
+  "name": "Cisco",
+  "entered": null
+ },
+ "AMAT": {
+  "name": "Applied Materials",
+  "entered": null
+ },
+ "LRCX": {
+  "name": "Lam Research",
+  "entered": null
+ },
+ "PANW": {
+  "name": "Palo Alto Networks",
+  "entered": null
+ },
+ "NFLX": {
+  "name": "Netflix",
+  "entered": null
+ },
+ "TXN": {
+  "name": "Texas Instruments",
+  "entered": null
+ },
+ "CRWD": {
+  "name": "CrowdStrike",
+  "entered": null
+ },
+ "ARM": {
+  "name": "Arm Holdings",
+  "entered": null
+ },
+ "AMGN": {
+  "name": "Amgen",
+  "entered": null
+ },
+ "LIN": {
+  "name": "Linde",
+  "entered": null
+ },
+ "SHOP": {
+  "name": "Shopify",
+  "entered": null
+ },
+ "MRVL": {
+  "name": "Marvell",
+  "entered": null
+ },
+ "KLAC": {
+  "name": "KLA",
+  "entered": null
+ },
+ "SNDK": {
+  "name": "Sandisk",
+  "entered": "2026-04-20"
+ },
+ "ADI": {
+  "name": "Analog Devices",
+  "entered": null
+ },
+ "GILD": {
+  "name": "Gilead",
+  "entered": null
+ },
+ "QCOM": {
+  "name": "Qualcomm",
+  "entered": null
+ },
+ "PEP": {
+  "name": "PepsiCo",
+  "entered": null
+ },
+ "TMUS": {
+  "name": "T-Mobile US",
+  "entered": null
+ },
+ "STX": {
+  "name": "Seagate",
+  "entered": "2025-12-22"
+ },
+ "ISRG": {
+  "name": "Intuitive Surgical",
+  "entered": null
+ },
+ "WDC": {
+  "name": "Western Digital",
+  "entered": "2025-12-22"
+ },
+ "VRTX": {
+  "name": "Vertex Pharma",
+  "entered": null
+ },
+ "FTNT": {
+  "name": "Fortinet",
+  "entered": null
+ },
+ "BKNG": {
+  "name": "Booking",
+  "entered": null
+ },
+ "ADP": {
+  "name": "ADP",
+  "entered": null
+ },
+ "PDD": {
+  "name": "PDD Holdings",
+  "entered": null
+ },
+ "SBUX": {
+  "name": "Starbucks",
+  "entered": null
+ },
+ "MAR": {
+  "name": "Marriott",
+  "entered": null
+ },
+ "ABNB": {
+  "name": "Airbnb",
+  "entered": null
+ },
+ "ADBE": {
+  "name": "Adobe",
+  "entered": null
+ },
+ "DDOG": {
+  "name": "Datadog",
+  "entered": null
+ },
+ "MRNA": {
+  "name": "Moderna",
+  "entered": "2026-10-09"
+ },
+ "CEG": {
+  "name": "Constellation Energy",
+  "entered": null
+ },
+ "MELI": {
+  "name": "MercadoLibre",
+  "entered": null
+ },
+ "CSX": {
+  "name": "CSX",
+  "entered": null
+ },
+ "MNST": {
+  "name": "Monster Beverage",
+  "entered": null
+ },
+ "APP": {
+  "name": "AppLovin",
+  "entered": null
+ },
+ "CDNS": {
+  "name": "Cadence Design",
+  "entered": null
+ },
+ "INTU": {
+  "name": "Intuit",
+  "entered": null
+ },
+ "CTAS": {
+  "name": "Cintas",
+  "entered": null
+ },
+ "SNPS": {
+  "name": "Synopsys",
+  "entered": null
+ },
+ "REGN": {
+  "name": "Regeneron",
+  "entered": null
+ },
+ "DASH": {
+  "name": "DoorDash",
+  "entered": null
+ },
+ "MDLZ": {
+  "name": "Mondelez",
+  "entered": null
+ },
+ "CMCSA": {
+  "name": "Comcast",
+  "entered": null
+ },
+ "LITE": {
+  "name": "Lumentum",
+  "entered": "2026-05-18"
+ },
+ "ROST": {
+  "name": "Ross Stores",
+  "entered": null
+ },
+ "ORLY": {
+  "name": "O'Reilly Automotive",
+  "entered": null
+ },
+ "AEP": {
+  "name": "American Electric Power",
+  "entered": null
+ },
+ "HON": {
+  "name": "Honeywell",
+  "entered": null
+ },
+ "MSTR": {
+  "name": "Strategy",
+  "entered": null
+ },
+ "MPWR": {
+  "name": "Monolithic Power",
+  "entered": "2025-12-22"
+ },
+ "NXPI": {
+  "name": "NXP Semiconductors",
+  "entered": null
+ },
+ "FAST": {
+  "name": "Fastenal",
+  "entered": null
+ },
+ "PCAR": {
+  "name": "Paccar",
+  "entered": null
+ },
+ "FANG": {
+  "name": "Diamondback Energy",
+  "entered": null
+ },
+ "BKR": {
+  "name": "Baker Hughes",
+  "entered": null
+ },
+ "TER": {
+  "name": "Teradyne",
+  "entered": "2026-06-22"
+ },
+ "HONA": {
+  "name": "Honeywell Aerospace",
+  "entered": "2026-06-29"
+ },
+ "ADSK": {
+  "name": "Autodesk",
+  "entered": null
+ },
+ "ALAB": {
+  "name": "Astera Labs",
+  "entered": "2026-06-22"
+ },
+ "TRI": {
+  "name": "Thomson Reuters",
+  "entered": null
+ },
+ "WDAY": {
+  "name": "Workday",
+  "entered": null
+ },
+ "PYPL": {
+  "name": "PayPal",
+  "entered": null
+ },
+ "CCEP": {
+  "name": "Coca-Cola Europacific",
+  "entered": null
+ },
+ "XEL": {
+  "name": "Xcel Energy",
+  "entered": null
+ },
+ "KDP": {
+  "name": "Keurig Dr Pepper",
+  "entered": null
+ },
+ "NBIS": {
+  "name": "Nebius",
+  "entered": "2026-06-22"
+ },
+ "EXC": {
+  "name": "Exelon",
+  "entered": null
+ },
+ "IDXX": {
+  "name": "Idexx Labs",
+  "entered": null
+ },
+ "MCHP": {
+  "name": "Microchip",
+  "entered": null
+ },
+ "PAYX": {
+  "name": "Paychex",
+  "entered": null
+ },
+ "ROP": {
+  "name": "Roper Technologies",
+  "entered": null
+ },
+ "ODFL": {
+  "name": "Old Dominion Freight",
+  "entered": null
+ },
+ "TTWO": {
+  "name": "Take-Two",
+  "entered": null
+ },
+ "FER": {
+  "name": "Ferrovial",
+  "entered": "2025-12-22"
+ },
+ "RKLB": {
+  "name": "Rocket Lab",
+  "entered": "2026-06-22"
+ },
+ "CRWV": {
+  "name": "CoreWeave",
+  "entered": "2026-06-22"
+ },
+ "AXON": {
+  "name": "Axon",
+  "entered": null
+ },
+ "GEHC": {
+  "name": "GE HealthCare",
+  "entered": null
+ },
+ "DXCM": {
+  "name": "DexCom",
+  "entered": null
+ },
+ "ALNY": {
+  "name": "Alnylam",
+  "entered": "2025-12-22"
+ },
+ "CPRT": {
+  "name": "Copart",
+  "entered": null
+ }
+}

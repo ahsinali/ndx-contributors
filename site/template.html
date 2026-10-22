@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nasdaq-100 Contributors</title>
+<meta name="description" content="Which stocks drove the Nasdaq-100 over 1 day, 1 week, 1 month, year to date and 1 year.">
+<style>
+:root {
+  --font-anthropic-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-anthropic-serif: Georgia, "Times New Roman", serif;
+  --color-fg: #1c1b19; --color-fg-muted: #6b6963; --color-bg: #f7f6f2; --color-panel: #ffffff; --color-border-line: #e4e1d8;
+  --color-ok: #1d7a4a; --color-warn: #a86400; --color-bad: #b42318;
+  --cds-font-size-caption: 0.8rem; --cds-font-size-body: 0.95rem; --cds-font-size-heading: 1.05rem; --cds-font-size-title: 1.9rem;
+  --cds-font-weight-medium: 600;
+  --cds-gap-xs: 0.25rem; --cds-gap-sm: 0.5rem; --cds-gap-md: 0.75rem; --cds-gap-lg: 1.25rem; --cds-gap-xl: 2rem;
+  --cds-pad-xs: 0.3rem; --cds-pad-sm: 0.5rem; --cds-pad-md: 0.8rem; --cds-pad-lg: 1rem; --cds-pad-xl: 1.5rem;
+  --cds-radius: 10px; --cds-chart-axis: #9a978f; --cds-surface-popover: var(--color-panel); --cds-border: var(--color-border-line);
+  --cds-shadow-popover: 0 6px 20px rgba(0,0,0,.12); --cds-text-secondary: var(--color-fg-muted); --cds-dur-slow: 300ms;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --color-fg: #ecebe6; --color-fg-muted: #a3a097; --color-bg: #161614; --color-panel: #1f1f1c; --color-border-line: #34332f;
+          --color-ok: #4fc38a; --color-bad: #f2766b; --cds-chart-axis: #6f6c64; --cds-shadow-popover: 0 6px 20px rgba(0,0,0,.5); }
+}
+html { background: var(--color-bg); }
+body { margin: 0; background: var(--color-bg); color: var(--color-fg); -webkit-text-size-adjust: 100%; }
+#dash-root { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.dash-skeleton { color: transparent !important; background: var(--color-border-line); border-radius: 6px; }
+.nx a { color: inherit; }
+.nx-snap { font-style: italic; }
+
+.nx { container-type: inline-size; font-family: var(--font-anthropic-sans); color: var(--color-fg); display: grid; gap: var(--cds-gap-lg); }
+.nx-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0 0 var(--cds-gap-xs); }
+.nx-takeaway { margin: 0; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); line-height: 1.5; }
+.nx-takeaway b, .nx .nx-strong { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.nx-asof { margin: var(--cds-gap-xs) 0 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.nx-periods { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
+.nx-periods button { font: inherit; font-size: var(--cds-font-size-body); padding: var(--cds-pad-xs) var(--cds-pad-md); border-radius: 999px; border: 1px solid var(--color-border-line); background: var(--color-panel); color: var(--color-fg); cursor: pointer; font-variant-numeric: tabular-nums; }
+.nx-periods button[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); border-color: var(--color-fg); }
+.nx-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); gap: var(--cds-gap-md); }
+.nx-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+.nx-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.nx-big { display: block; margin-top: var(--cds-gap-xs); font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+.nx-sub { display: block; margin-top: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.nx-up { color: var(--color-ok); }
+.nx-down { color: var(--color-bad); }
+.nx-card h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+.nx-note { margin: var(--cds-gap-xs) 0 var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.45; }
+.nx-chart { position: relative; min-height: 460px; }
+.nx-chart svg { display: block; }
+.nx-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; white-space: nowrap; z-index: 2; }
+.nx-tip .nx-tip-h { color: var(--cds-text-secondary); }
+.nx-tools { display: flex; gap: var(--cds-gap-sm); align-items: center; flex-wrap: wrap; margin-bottom: var(--cds-gap-sm); }
+.nx-tools input { font: inherit; font-size: var(--cds-font-size-body); flex: 1 1 10rem; min-width: 0; padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); }
+.nx-scroll { max-height: 34rem; overflow: auto; }
+.nx-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-body); font-variant-numeric: tabular-nums; }
+.nx-table th { position: sticky; top: 0; background: var(--color-panel); text-align: right; font-weight: var(--cds-font-weight-medium); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); padding: 0; border-bottom: 1px solid var(--color-border-line); }
+.nx-table th button { all: unset; cursor: pointer; display: block; padding: var(--cds-pad-xs) var(--cds-pad-sm); }
+.nx-table th[aria-sort="ascending"] button::after { content: " ↑"; }
+.nx-table th[aria-sort="descending"] button::after { content: " ↓"; }
+.nx-table td { text-align: right; padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.nx-table th.nx-l, .nx-table td.nx-l { text-align: left; }
+.nx-table td.nx-tk { font-weight: var(--cds-font-weight-medium); }
+.nx-table td.nx-nm { color: var(--color-fg-muted); white-space: normal; min-width: 8rem; }
+.nx-recon { display: grid; gap: var(--cds-gap-xs); margin-top: var(--cds-gap-sm); font-variant-numeric: tabular-nums; }
+.nx-recon div { display: flex; justify-content: space-between; gap: var(--cds-gap-md); padding: var(--cds-pad-xs) 0; border-bottom: 1px solid var(--color-border-line); }
+.nx-recon div:last-child { border-bottom: 0; font-weight: var(--cds-font-weight-medium); }
+.nx-method p { margin: var(--cds-gap-sm) 0 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.5; }
+.nx-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-md); }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+[data-dash-source-state=empty] { color: transparent; }
+@container (max-width: 640px) { .nx-hide-sm { display: none; } }
+@container (max-width: 420px) { .nx-hide-xs { display: none; } }
+
+.nx-banner { border: 1px solid var(--color-warn); color: var(--color-fg); background: var(--color-panel); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.nx-banner b { color: var(--color-warn); }
+</style></head>
+<body><div id="dash-root">
+
+<div class="nx">
+  <header class="nx-head" id="overview">
+    <h1>Nasdaq-100 contributors</h1>
+    <p class="nx-takeaway dash-skeleton" id="nx-takeaway">—</p>
+    <p class="nx-asof" id="nx-asof">—</p>
+  </header>
+
+  <div class="nx-banner" id="nx-banner" hidden></div>
+  <div class="nx-periods" id="nx-periods" role="group" aria-label="Period" data-source="index_moves"></div>
+
+  <section class="nx-tiles" id="headline">
+    <div class="nx-card">
+      <span class="nx-label">Nasdaq-100 close</span>
+      <span class="nx-big dash-skeleton" data-source="index_moves" data-field="endLevel" data-where="period=1D">—</span>
+      <span class="nx-sub">from <span data-source="index_moves" data-field="startLevel" data-where="period=1D">—</span></span>
+    </div>
+    <div class="nx-card">
+      <span class="nx-label">Change (points)</span>
+      <span class="nx-big dash-skeleton" data-source="index_moves" data-field="change" data-where="period=1D">—</span>
+      <span class="nx-sub" id="nx-period-name">—</span>
+    </div>
+    <div class="nx-card">
+      <span class="nx-label">Change (%)</span>
+      <span class="nx-big dash-skeleton" data-source="index_moves" data-field="changePct" data-where="period=1D">—</span>
+      <span class="nx-sub">price return</span>
+    </div>
+    <div class="nx-card">
+      <span class="nx-label">Members adding / subtracting</span>
+      <span class="nx-big dash-skeleton"><span data-source="index_moves" data-field="advancers" data-where="period=1D">—</span> / <span data-source="index_moves" data-field="decliners" data-where="period=1D">—</span></span>
+      <span class="nx-sub">by sign of contribution</span>
+    </div>
+  </section>
+
+  <section class="nx-card" id="chart">
+    <h2>Biggest contributors, in index points</h2>
+    <p class="nx-note">The 20 largest moves by size. Bars right of the line added to the index; bars left of it subtracted.</p>
+    <div class="nx-chart dash-skeleton" id="nx-chart" data-source="contributions"></div>
+  </section>
+
+  <section class="nx-card" id="table">
+    <h2>Top 50 contributors</h2>
+    <p class="nx-note">Ranked by size of contribution. Points are index points; index % is the share of the index's return in percentage points; share is the stock's slice of the index's move (negative means it worked against the move). Tap a header to sort.</p>
+    <div class="nx-tools"><input id="nx-search" type="search" placeholder="Filter by ticker or name" aria-label="Filter by ticker or name"></div>
+    <div class="nx-scroll">
+      <table class="nx-table" data-source="contributions" data-row-key="period,ticker">
+        <thead><tr>
+          <th data-field="rank" data-k="rank"><button>#</button></th>
+          <th class="nx-l" data-field="ticker" data-k="ticker"><button>Ticker</button></th>
+          <th class="nx-l nx-hide-sm" data-field="name" data-k="name"><button>Name</button></th>
+          <th data-field="points" data-k="points"><button>Points</button></th>
+          <th class="nx-hide-xs" data-field="indexPctPts" data-k="indexPctPts"><button>Index %</button></th>
+          <th class="nx-hide-sm" data-field="shareOfMove" data-k="shareOfMove"><button>Share</button></th>
+          <th data-field="stockReturnPct" data-k="stockReturnPct"><button>Stock %</button></th>
+          <th class="nx-hide-sm" data-field="weightPct" data-k="weightPct"><button>Weight</button></th>
+        </tr></thead>
+        <tbody id="nx-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="nx-two">
+    <section class="nx-card" id="reconciliation">
+      <h2>Does it add up?</h2>
+      <p class="nx-note">Contributions of today's members, summed, against the index's actual move. The gap is what today's member list and weights can't see: rebalancing, companies that left the index, the days before a new member joined, and error in the weight estimate.</p>
+      <div class="nx-recon">
+        <div><span>Top 50 contributors</span><span data-source="index_moves" data-field="top50Sum" data-where="period=1D">—</span></div>
+        <div><span>All current members</span><span data-source="index_moves" data-field="constituentSum" data-where="period=1D">—</span></div>
+        <div><span>Other (unattributed)</span><span data-source="index_moves" data-field="residual" data-where="period=1D">—</span></div>
+        <div><span>Nasdaq-100 change</span><span data-source="index_moves" data-field="change" data-where="period=1D">—</span></div>
+      </div>
+    </section>
+    <section class="nx-card nx-method" id="method">
+      <h2>How contributions are worked out</h2>
+      <p>Each stock's points in the index today are its index weight times today's close. Rolling that back by the stock's own price change gives its points at the start of the period, and the difference is its contribution. Summed across members, the contributions add to the index's move when nothing was rebalanced in between.</p>
+      <p>Stocks that joined during the period count from the close before they joined, so their earlier gains aren't credited. Parent stocks are adjusted for spin-offs (Comcast/Versant, Honeywell/Solstice and Honeywell Aerospace). Prices are closing prices, not including dividends.</p>
+      <p>From <span id="nx-logstart">the go-live date</span> on, each day's contribution is logged with the weights in force that day (start-of-day weight × day's return × prior index close), so periods chain through rebalances and membership changes. Days before that are estimated by rolling the starting weights back with each stock's own price, which can't see rebalances; that is what the Other line picks up on long windows.</p>
+      <p>Weights start from the Invesco QQQ holdings (the fund that tracks this index) as of <span id="nx-seed">—</span> and roll forward daily with prices. When the index changes membership or rebalances, the daily check flags it and the weights are refreshed.</p>
+    </section>
+  </div>
+  <footer class="nx-card nx-method" id="sources">
+    <h2>Data</h2>
+    <p>Closing prices and index levels: Yahoo Finance. Starting weights: Invesco QQQ holdings; SpaceX, Moderna and Copart estimated. Membership changes: Nasdaq announcements.</p>
+    <p class="nx-snap" id="nx-updated">—</p>
+  </footer>
+</div></div>
+<script id="nx-data" type="application/json">__NX_DATA__</script>
+<script src="d3.min.js"></script>
+<script>
+window.dash = (() => {
+  const DATA = JSON.parse(document.getElementById('nx-data').textContent);
+  const p0 = (new URLSearchParams(location.hash.slice(1)).get('p')) || '1D';
+  let params = { period: p0 };
+  const fns = [];
+  const run = () => fns.forEach((f) => f());
+  let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(run, 120); });
+  return {
+    data: (id) => ({ status: DATA[id] ? 'ok' : 'missing', data: DATA[id] || [], columns: DATA[id] && DATA[id][0] ? Object.keys(DATA[id][0]) : [], refreshing: false, meta: [] }),
+    params: () => ({ ...params }),
+    setParams: (p) => { params = { ...params, ...p }; history.replaceState(null, '', '#p=' + params.period); run(); },
+    resetParams: () => { params = { period: '1D' }; run(); },
+    onData: (fn) => { fns.push(fn); fn(); },
+    setLink: () => {}, refresh: () => {}, calc: () => {}, loader: () => {},
+  };
+})();
+</script>
+<script>
+const fmtPts = d3.format('+,.2f');
+const fmtLvl = d3.format(',.2f');
+const fmtPct2 = (v) => (v == null || !isFinite(v)) ? '—' : d3.format('+.2f')(v) + '%';
+const fmtPP = (v) => d3.format('+.3f')(v) + ' pp';
+const fmtShare = (v) => d3.format('+.1f')(v) + '%';
+const fmtW = (v) => d3.format('.2f')(v) + '%';
+const fmtDate = (s) => d3.utcFormat('%b %-d, %Y')(new Date(s + 'T00:00:00Z'));
+const sign = (v) => (v > 0 ? 'nx-up' : v < 0 ? 'nx-down' : '');
+window.nxState = window.nxState || { sortKey: 'rank', sortDir: 1, q: '' };
+
+dash.setParams({ period: dash.params().period || '1D' });
+
+document.getElementById('nx-periods').addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-period]');
+  if (b) { dash.setParams({ period: b.dataset.period }); dash.setLink('overview'); }
+});
+document.getElementById('nx-search').addEventListener('input', (e) => { nxState.q = e.target.value.trim().toLowerCase(); nxRender(); });
+document.querySelectorAll('.nx-table th[data-k]').forEach((th) => {
+  th.querySelector('button').addEventListener('click', () => {
+    const k = th.dataset.k;
+    if (nxState.sortKey === k) nxState.sortDir *= -1;
+    else { nxState.sortKey = k; nxState.sortDir = (k === 'rank' || k === 'ticker' || k === 'name') ? 1 : -1; }
+    nxRender();
+  });
+});
+
+function nxRender() {
+  const per = dash.params().period || '1D';
+  const M = dash.data('index_moves');
+  const C = dash.data('contributions');
+  const okM = M.status === 'ok', okC = C.status === 'ok';
+
+  // period buttons
+  const pb = document.getElementById('nx-periods');
+  const moves = okM ? M.data.slice().sort((a, b) => Number(a.order) - Number(b.order)) : [];
+  pb.replaceChildren(...moves.map((m) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.dataset.period = m.period; b.textContent = m.period;
+    b.title = m.label; b.setAttribute('aria-pressed', String(m.period === per));
+    return b;
+  }));
+  const mv = moves.find((m) => m.period === per);
+
+  // single-value marks follow the chosen period
+  document.querySelectorAll('[data-source="index_moves"][data-field]').forEach((el) => {
+    el.setAttribute('data-where', 'period=' + per);
+    const f = el.dataset.field;
+    el.classList.remove('dash-skeleton', 'nx-up', 'nx-down');
+    if (!mv) { el.textContent = '—'; return; }
+    const v = Number(mv[f]);
+    if (f === 'endLevel' || f === 'startLevel') el.textContent = fmtLvl(v);
+    else if (f === 'changePct') { el.textContent = fmtPct2(v); el.classList.add(sign(v)); }
+    else if (f === 'advancers' || f === 'decliners') el.textContent = d3.format(',')(v);
+    else { el.textContent = fmtPts(v); if (f === 'change') el.classList.add(sign(v)); }
+  });
+  document.querySelectorAll('.nx-big').forEach((el) => el.classList.remove('dash-skeleton'));
+  document.getElementById('nx-period-name').textContent = mv ? mv.label : '—';
+  document.getElementById('nx-asof').textContent = mv ? 'Close of ' + fmtDate(mv.startDate) + ' to close of ' + fmtDate(mv.endDate) : '—';
+
+  const rows = okC ? C.data.filter((r) => r.period === per).map((r) => ({ ...r, rank: Number(r.rank), points: Number(r.points), indexPctPts: Number(r.indexPctPts), shareOfMove: Number(r.shareOfMove), stockReturnPct: r.stockReturnPct == null ? null : Number(r.stockReturnPct), weightPct: Number(r.weightPct) })) : [];
+
+  // takeaway
+  const tk = document.getElementById('nx-takeaway');
+  tk.classList.remove('dash-skeleton');
+  if (mv && rows.length) {
+    const up = Number(mv.change) >= 0;
+    const lead = rows.filter((r) => (up ? r.points > 0 : r.points < 0)).sort((a, b) => (up ? b.points - a.points : a.points - b.points)).slice(0, 3);
+    const drag = rows.filter((r) => (up ? r.points < 0 : r.points > 0)).sort((a, b) => (up ? a.points - b.points : b.points - a.points))[0];
+    const mk = (src, field, where, text, cls) => { const s = document.createElement('span'); s.dataset.source = src; s.dataset.field = field; s.setAttribute('data-where', where); s.textContent = text; s.className = 'nx-strong ' + (cls || ''); return s; };
+    const lead0 = { '1D': 'On the day', '1W': 'Over the past week', '1M': 'Over the past month', 'YTD': 'So far this year', '1Y': 'Over the past year' }[per] || mv.label;
+    const parts = [lead0 + ' the index moved ',
+      mk('index_moves', 'change', 'period=' + per, fmtPts(Number(mv.change)), sign(Number(mv.change))), ' points (',
+      mk('index_moves', 'changePct', 'period=' + per, fmtPct2(Number(mv.changePct)), sign(Number(mv.changePct))), '). ',
+      (up ? 'Most of the lift came from ' : 'Most of the drop came from ')];
+    lead.forEach((r, i) => {
+      parts.push(r.ticker + ' (', mk('contributions', 'points', 'period=' + per + '&ticker=' + encodeURIComponent(r.ticker), fmtPts(r.points), sign(r.points)), ')');
+      parts.push(i < lead.length - 2 ? ', ' : i === lead.length - 2 ? ' and ' : '. ');
+    });
+    if (drag) parts.push('The biggest ' + (up ? 'drag' : 'offset') + ' was ' + drag.ticker + ' (', mk('contributions', 'points', 'period=' + per + '&ticker=' + encodeURIComponent(drag.ticker), fmtPts(drag.points), sign(drag.points)), ').');
+    tk.replaceChildren(...parts.map((p) => (typeof p === 'string' ? document.createTextNode(p) : p)));
+  } else tk.textContent = '—';
+
+
+  // meta: status banner, dates in the method and footer
+  const MT = dash.data('meta');
+  const mt = MT.status === 'ok' && MT.data.length ? MT.data[0] : null;
+  const bn = document.getElementById('nx-banner');
+  if (mt && mt.status !== 'ok' && mt.messages && mt.messages.length) {
+    bn.hidden = false;
+    const h = document.createElement('b'); h.textContent = 'Check needed. ';
+    bn.replaceChildren(h, document.createTextNode(mt.messages.join(' ')));
+  } else bn.hidden = true;
+  if (mt) {
+    document.getElementById('nx-logstart').textContent = fmtDate(mt.logStart);
+    document.getElementById('nx-seed').textContent = fmtDate(mt.seedDate);
+    document.getElementById('nx-updated').textContent = 'Data through the ' + fmtDate(mt.asOf) + ' close. Rebuilt ' + mt.generatedAt + '; updates automatically after each US market close.';
+  }
+
+  nxChart(rows, C.status);
+  nxTable(rows, per);
+}
+
+function nxChart(rows, status) {
+  const box = document.getElementById('nx-chart');
+  box.replaceChildren();
+  if (status === 'error') { const d = document.createElement('div'); d.textContent = 'Failed to load'; d.className = 'nx-note'; box.append(d); box.classList.remove('dash-skeleton'); return; }
+  if (!rows.length) { box.classList.add('dash-skeleton'); return; }
+  box.classList.remove('dash-skeleton');
+  const data = rows.filter((r) => r.rank <= 20).sort((a, b) => b.points - a.points);
+  const W = Math.max(280, box.clientWidth || 320);
+  const rowH = 22, padT = 6, padB = 6;
+  const H = padT + padB + data.length * rowH;
+  const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Bar chart of the 20 largest contributions in index points');
+  const meas = svg.append('g').attr('font-size', 12).attr('font-family', 'var(--font-anthropic-sans)');
+  const tw = (s) => { const t = meas.append('text').text(s); const w = t.node().getComputedTextLength(); t.remove(); return w; };
+  const labW = d3.max(data, (d) => tw(d.ticker)) + 10;
+  const valW = d3.max(data, (d) => tw(fmtPts(d.points))) + 8;
+  const lo = Math.min(0, d3.min(data, (d) => d.points)), hi = Math.max(0, d3.max(data, (d) => d.points));
+  const x0 = labW + (lo < 0 ? valW : 0), x1 = W - (hi > 0 ? valW : 4);
+  const x = d3.scaleLinear([lo, hi], [x0, x1]);
+  const y = (i) => padT + i * rowH;
+  const g = svg.append('g').attr('font-size', 12).attr('font-family', 'var(--font-anthropic-sans)');
+  g.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', padT - 2).attr('y2', H - padB + 2).attr('stroke', 'var(--cds-chart-axis)');
+  const row = g.selectAll('g.r').data(data).join('g').attr('class', 'r').attr('transform', (d, i) => `translate(0,${y(i)})`);
+  row.append('text').attr('x', 0).attr('y', rowH / 2).attr('dy', '0.35em').attr('fill', 'var(--color-fg)').text((d) => d.ticker);
+  row.append('rect').attr('x', (d) => Math.min(x(0), x(d.points))).attr('y', 4).attr('height', rowH - 8).attr('width', (d) => Math.max(1, Math.abs(x(d.points) - x(0)))).attr('rx', 3)
+    .attr('fill', (d) => (d.points >= 0 ? 'var(--color-ok)' : 'var(--color-bad)')).attr('fill-opacity', 0.85);
+  row.append('text').attr('x', (d) => (d.points >= 0 ? x(d.points) + 4 : x(d.points) - 4)).attr('text-anchor', (d) => (d.points >= 0 ? 'start' : 'end'))
+    .attr('y', rowH / 2).attr('dy', '0.35em').attr('fill', 'var(--color-fg-muted)').style('font-variant-numeric', 'tabular-nums').text((d) => fmtPts(d.points));
+  const tip = document.createElement('div'); tip.className = 'nx-tip'; tip.hidden = true; box.append(tip);
+  row.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).attr('fill', 'transparent')
+    .on('pointerenter pointermove', (ev, d) => {
+      tip.replaceChildren();
+      const h = document.createElement('div'); h.className = 'nx-tip-h'; h.textContent = d.ticker + ' · ' + d.name;
+      const a = document.createElement('div'); a.textContent = fmtPts(d.points) + ' pts  (' + fmtPP(d.indexPctPts) + ')';
+      const b = document.createElement('div'); b.textContent = 'Stock ' + fmtPct2(d.stockReturnPct) + ' · weight ' + fmtW(d.weightPct);
+      tip.append(h, a, b);
+      if (d.joined) { const c = document.createElement('div'); c.textContent = 'Joined ' + fmtDate(d.joined) + '; counted from then'; tip.append(c); }
+      tip.hidden = false;
+      const r = box.getBoundingClientRect(); const px = ev.clientX - r.left, py = ev.clientY - r.top;
+      const tw2 = tip.offsetWidth, th2 = tip.offsetHeight;
+      tip.style.left = Math.max(0, Math.min(r.width - tw2, px + 12)) + 'px';
+      tip.style.top = Math.max(0, Math.min(r.height - th2, py - th2 - 8)) + 'px';
+    })
+    .on('pointerleave', () => { tip.hidden = true; });
+  box.style.minHeight = H + 'px';
+}
+
+function nxTable(rows, per) {
+  const tb = document.getElementById('nx-tbody');
+  const { sortKey, sortDir, q } = nxState;
+  document.querySelectorAll('.nx-table th[data-k]').forEach((th) => th.setAttribute('aria-sort', th.dataset.k === sortKey ? (sortDir > 0 ? 'ascending' : 'descending') : 'none'));
+  let list = rows.filter((r) => r.rank <= 50);
+  if (q) list = list.filter((r) => (r.ticker + ' ' + r.name).toLowerCase().includes(q));
+  list.sort((a, b) => {
+    const va = a[sortKey], vb = b[sortKey];
+    if (va == null || vb == null) return (va == null) - (vb == null);
+    return (typeof va === 'number' ? va - vb : String(va).localeCompare(String(vb))) * sortDir;
+  });
+  tb.replaceChildren(...list.map((r) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = encodeURIComponent(r.period) + ',' + encodeURIComponent(r.ticker);
+    const td = (text, cls) => { const c = document.createElement('td'); c.textContent = text; if (cls) c.className = cls; tr.append(c); return c; };
+    td(String(r.rank));
+    td(r.ticker, 'nx-l nx-tk');
+    td(r.name, 'nx-l nx-nm nx-hide-sm');
+    td(fmtPts(r.points), sign(r.points));
+    td(fmtPP(r.indexPctPts), 'nx-hide-xs ' + sign(r.indexPctPts));
+    td(fmtShare(r.shareOfMove), 'nx-hide-sm');
+    td(fmtPct2(r.stockReturnPct), sign(r.stockReturnPct));
+    td(fmtW(r.weightPct), 'nx-hide-sm');
+    return tr;
+  }));
+}
+
+dash.onData(() => nxRender());
+</script>
+</body></html>

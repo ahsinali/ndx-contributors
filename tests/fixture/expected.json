@@ -1,0 +1,3066 @@
+{
+"contributions": [
+{
+"period": "1D",
+"ticker": "SPCX",
+"points": 62.54,
+"stockReturnPct": 7.79
+},
+{
+"period": "1D",
+"ticker": "NVDA",
+"points": 62.08,
+"stockReturnPct": 2.54
+},
+{
+"period": "1D",
+"ticker": "AMD",
+"points": 37.4,
+"stockReturnPct": 3.36
+},
+{
+"period": "1D",
+"ticker": "AAPL",
+"points": 30.57,
+"stockReturnPct": 1.32
+},
+{
+"period": "1D",
+"ticker": "TSLA",
+"points": 29.64,
+"stockReturnPct": 3.41
+},
+{
+"period": "1D",
+"ticker": "PLTR",
+"points": 26.54,
+"stockReturnPct": 4.74
+},
+{
+"period": "1D",
+"ticker": "MU",
+"points": 25.41,
+"stockReturnPct": 1.96
+},
+{
+"period": "1D",
+"ticker": "NFLX",
+"points": -19.4,
+"stockReturnPct": -5.31
+},
+{
+"period": "1D",
+"ticker": "CRWD",
+"points": 15.59,
+"stockReturnPct": 5.26
+},
+{
+"period": "1D",
+"ticker": "GOOGL",
+"points": -14.83,
+"stockReturnPct": -1.62
+},
+{
+"period": "1D",
+"ticker": "GOOG",
+"points": -13.82,
+"stockReturnPct": -1.62
+},
+{
+"period": "1D",
+"ticker": "INTC",
+"points": 8.08,
+"stockReturnPct": 1.39
+},
+{
+"period": "1D",
+"ticker": "TXN",
+"points": 7.96,
+"stockReturnPct": 2.47
+},
+{
+"period": "1D",
+"ticker": "AVGO",
+"points": 7.55,
+"stockReturnPct": 1.03
+},
+{
+"period": "1D",
+"ticker": "PANW",
+"points": 7.3,
+"stockReturnPct": 2.05
+},
+{
+"period": "1D",
+"ticker": "DDOG",
+"points": 7.1,
+"stockReturnPct": 6.5
+},
+{
+"period": "1D",
+"ticker": "STX",
+"points": 6.3,
+"stockReturnPct": 3.22
+},
+{
+"period": "1D",
+"ticker": "WDC",
+"points": 6.27,
+"stockReturnPct": 3.89
+},
+{
+"period": "1D",
+"ticker": "ADI",
+"points": 5.55,
+"stockReturnPct": 2.24
+},
+{
+"period": "1D",
+"ticker": "TMUS",
+"points": -5.54,
+"stockReturnPct": -2.54
+},
+{
+"period": "1D",
+"ticker": "BKNG",
+"points": -5.44,
+"stockReturnPct": -3.38
+},
+{
+"period": "1D",
+"ticker": "CEG",
+"points": 5.42,
+"stockReturnPct": 4.6
+},
+{
+"period": "1D",
+"ticker": "ASML",
+"points": 5.41,
+"stockReturnPct": 2.81
+},
+{
+"period": "1D",
+"ticker": "MRVL",
+"points": 4.93,
+"stockReturnPct": 1.81
+},
+{
+"period": "1D",
+"ticker": "GILD",
+"points": -4.64,
+"stockReturnPct": -1.88
+},
+{
+"period": "1D",
+"ticker": "MSTR",
+"points": 4.55,
+"stockReturnPct": 7.54
+},
+{
+"period": "1D",
+"ticker": "META",
+"points": 4.51,
+"stockReturnPct": 0.47
+},
+{
+"period": "1D",
+"ticker": "ISRG",
+"points": -4.41,
+"stockReturnPct": -2.26
+},
+{
+"period": "1D",
+"ticker": "LRCX",
+"points": -4.23,
+"stockReturnPct": -1.0
+},
+{
+"period": "1D",
+"ticker": "AMAT",
+"points": 3.96,
+"stockReturnPct": 0.98
+},
+{
+"period": "1D",
+"ticker": "DASH",
+"points": -3.79,
+"stockReturnPct": -3.77
+},
+{
+"period": "1D",
+"ticker": "MSFT",
+"points": 3.73,
+"stockReturnPct": 0.2
+},
+{
+"period": "1D",
+"ticker": "VRTX",
+"points": 3.2,
+"stockReturnPct": 1.92
+},
+{
+"period": "1D",
+"ticker": "QCOM",
+"points": 2.98,
+"stockReturnPct": 1.28
+},
+{
+"period": "1D",
+"ticker": "ARM",
+"points": 2.95,
+"stockReturnPct": 2.5
+},
+{
+"period": "1D",
+"ticker": "FTNT",
+"points": 2.94,
+"stockReturnPct": 1.83
+},
+{
+"period": "1D",
+"ticker": "KLAC",
+"points": 2.82,
+"stockReturnPct": 1.04
+},
+{
+"period": "1D",
+"ticker": "CSCO",
+"points": 2.77,
+"stockReturnPct": 0.52
+},
+{
+"period": "1D",
+"ticker": "LITE",
+"points": 2.76,
+"stockReturnPct": 3.43
+},
+{
+"period": "1D",
+"ticker": "DXCM",
+"points": -2.57,
+"stockReturnPct": -6.39
+},
+{
+"period": "1D",
+"ticker": "SNDK",
+"points": 2.46,
+"stockReturnPct": 0.94
+},
+{
+"period": "1D",
+"ticker": "PDD",
+"points": -2.36,
+"stockReturnPct": -3.56
+},
+{
+"period": "1D",
+"ticker": "MAR",
+"points": 2.27,
+"stockReturnPct": 1.68
+},
+{
+"period": "1D",
+"ticker": "MPWR",
+"points": 2.23,
+"stockReturnPct": 2.77
+},
+{
+"period": "1D",
+"ticker": "CDNS",
+"points": 2.17,
+"stockReturnPct": 1.94
+},
+{
+"period": "1D",
+"ticker": "COST",
+"points": 2.09,
+"stockReturnPct": 0.37
+},
+{
+"period": "1D",
+"ticker": "RKLB",
+"points": 2.03,
+"stockReturnPct": 5.44
+},
+{
+"period": "1D",
+"ticker": "MDLZ",
+"points": -2.02,
+"stockReturnPct": -1.95
+},
+{
+"period": "1D",
+"ticker": "MRNA",
+"points": 1.88,
+"stockReturnPct": 1.54
+},
+{
+"period": "1D",
+"ticker": "TER",
+"points": 1.82,
+"stockReturnPct": 2.64
+},
+{
+"period": "1D",
+"ticker": "APP",
+"points": -1.78,
+"stockReturnPct": -1.67
+},
+{
+"period": "1D",
+"ticker": "ABNB",
+"points": -1.74,
+"stockReturnPct": -1.84
+},
+{
+"period": "1D",
+"ticker": "CCEP",
+"points": -1.74,
+"stockReturnPct": -2.75
+},
+{
+"period": "1D",
+"ticker": "CTAS",
+"points": 1.61,
+"stockReturnPct": 1.44
+},
+{
+"period": "1D",
+"ticker": "MELI",
+"points": -1.58,
+"stockReturnPct": -1.31
+},
+{
+"period": "1D",
+"ticker": "NXPI",
+"points": 1.55,
+"stockReturnPct": 2.0
+},
+{
+"period": "1D",
+"ticker": "CMCSA",
+"points": -1.3,
+"stockReturnPct": -1.25
+},
+{
+"period": "1D",
+"ticker": "AMZN",
+"points": -1.29,
+"stockReturnPct": -0.1
+},
+{
+"period": "1D",
+"ticker": "SHOP",
+"points": 1.26,
+"stockReturnPct": 0.47
+},
+{
+"period": "1D",
+"ticker": "ROST",
+"points": -1.26,
+"stockReturnPct": -1.29
+},
+{
+"period": "1D",
+"ticker": "FAST",
+"points": 1.22,
+"stockReturnPct": 1.63
+},
+{
+"period": "1D",
+"ticker": "PEP",
+"points": 1.18,
+"stockReturnPct": 0.51
+},
+{
+"period": "1D",
+"ticker": "TRI",
+"points": 1.18,
+"stockReturnPct": 2.16
+},
+{
+"period": "1D",
+"ticker": "ALAB",
+"points": 1.17,
+"stockReturnPct": 1.85
+},
+{
+"period": "1D",
+"ticker": "HONA",
+"points": 1.06,
+"stockReturnPct": 1.6
+},
+{
+"period": "1D",
+"ticker": "MNST",
+"points": -1.03,
+"stockReturnPct": -0.87
+},
+{
+"period": "1D",
+"ticker": "AXON",
+"points": 1.02,
+"stockReturnPct": 2.54
+},
+{
+"period": "1D",
+"ticker": "FER",
+"points": 1.01,
+"stockReturnPct": 1.6
+},
+{
+"period": "1D",
+"ticker": "ALNY",
+"points": -0.98,
+"stockReturnPct": -2.43
+},
+{
+"period": "1D",
+"ticker": "ADP",
+"points": 0.89,
+"stockReturnPct": 0.6
+},
+{
+"period": "1D",
+"ticker": "MCHP",
+"points": 0.89,
+"stockReturnPct": 1.71
+},
+{
+"period": "1D",
+"ticker": "SNPS",
+"points": 0.87,
+"stockReturnPct": 0.8
+},
+{
+"period": "1D",
+"ticker": "ORLY",
+"points": -0.86,
+"stockReturnPct": -0.91
+},
+{
+"period": "1D",
+"ticker": "ADBE",
+"points": -0.86,
+"stockReturnPct": -0.65
+},
+{
+"period": "1D",
+"ticker": "LIN",
+"points": -0.77,
+"stockReturnPct": -0.26
+},
+{
+"period": "1D",
+"ticker": "CSX",
+"points": 0.77,
+"stockReturnPct": 0.67
+},
+{
+"period": "1D",
+"ticker": "GEHC",
+"points": -0.7,
+"stockReturnPct": -1.74
+},
+{
+"period": "1D",
+"ticker": "HON",
+"points": 0.57,
+"stockReturnPct": 0.66
+},
+{
+"period": "1D",
+"ticker": "FANG",
+"points": -0.53,
+"stockReturnPct": -0.74
+},
+{
+"period": "1D",
+"ticker": "IDXX",
+"points": -0.46,
+"stockReturnPct": -0.8
+},
+{
+"period": "1D",
+"ticker": "BKR",
+"points": 0.43,
+"stockReturnPct": 0.63
+},
+{
+"period": "1D",
+"ticker": "SBUX",
+"points": -0.42,
+"stockReturnPct": -0.29
+},
+{
+"period": "1D",
+"ticker": "AMGN",
+"points": -0.41,
+"stockReturnPct": -0.14
+},
+{
+"period": "1D",
+"ticker": "WMT",
+"points": -0.31,
+"stockReturnPct": -0.04
+},
+{
+"period": "1D",
+"ticker": "CPRT",
+"points": -0.29,
+"stockReturnPct": -0.88
+},
+{
+"period": "1D",
+"ticker": "KDP",
+"points": -0.28,
+"stockReturnPct": -0.46
+},
+{
+"period": "1D",
+"ticker": "WDAY",
+"points": -0.26,
+"stockReturnPct": -0.5
+},
+{
+"period": "1D",
+"ticker": "REGN",
+"points": -0.24,
+"stockReturnPct": -0.22
+},
+{
+"period": "1D",
+"ticker": "ADSK",
+"points": -0.2,
+"stockReturnPct": -0.3
+},
+{
+"period": "1D",
+"ticker": "CRWV",
+"points": -0.17,
+"stockReturnPct": -0.5
+},
+{
+"period": "1D",
+"ticker": "ODFL",
+"points": 0.16,
+"stockReturnPct": 0.3
+},
+{
+"period": "1D",
+"ticker": "TTWO",
+"points": -0.13,
+"stockReturnPct": -0.26
+},
+{
+"period": "1D",
+"ticker": "AEP",
+"points": 0.12,
+"stockReturnPct": 0.13
+},
+{
+"period": "1D",
+"ticker": "INTU",
+"points": 0.11,
+"stockReturnPct": 0.1
+},
+{
+"period": "1D",
+"ticker": "PCAR",
+"points": 0.1,
+"stockReturnPct": 0.14
+},
+{
+"period": "1D",
+"ticker": "ROP",
+"points": -0.08,
+"stockReturnPct": -0.16
+},
+{
+"period": "1D",
+"ticker": "XEL",
+"points": 0.08,
+"stockReturnPct": 0.13
+},
+{
+"period": "1D",
+"ticker": "PYPL",
+"points": 0.07,
+"stockReturnPct": 0.11
+},
+{
+"period": "1D",
+"ticker": "PAYX",
+"points": -0.06,
+"stockReturnPct": -0.11
+},
+{
+"period": "1D",
+"ticker": "NBIS",
+"points": 0.03,
+"stockReturnPct": 0.07
+},
+{
+"period": "1D",
+"ticker": "EXC",
+"points": 0.03,
+"stockReturnPct": 0.05
+},
+{
+"period": "1W",
+"ticker": "META",
+"points": -55.18,
+"stockReturnPct": -5.43
+},
+{
+"period": "1W",
+"ticker": "TSLA",
+"points": 44.86,
+"stockReturnPct": 5.26
+},
+{
+"period": "1W",
+"ticker": "LRCX",
+"points": -41.88,
+"stockReturnPct": -9.1
+},
+{
+"period": "1W",
+"ticker": "AMZN",
+"points": 41.19,
+"stockReturnPct": 3.26
+},
+{
+"period": "1W",
+"ticker": "SPCX",
+"points": 38.82,
+"stockReturnPct": 4.7
+},
+{
+"period": "1W",
+"ticker": "AMAT",
+"points": -37.72,
+"stockReturnPct": -8.44
+},
+{
+"period": "1W",
+"ticker": "AMD",
+"points": -37.65,
+"stockReturnPct": -3.17
+},
+{
+"period": "1W",
+"ticker": "GOOGL",
+"points": -34.64,
+"stockReturnPct": -3.7
+},
+{
+"period": "1W",
+"ticker": "INTC",
+"points": -32.84,
+"stockReturnPct": -5.26
+},
+{
+"period": "1W",
+"ticker": "GOOG",
+"points": -32.2,
+"stockReturnPct": -3.7
+},
+{
+"period": "1W",
+"ticker": "CSCO",
+"points": -32.14,
+"stockReturnPct": -5.61
+},
+{
+"period": "1W",
+"ticker": "NFLX",
+"points": -29.39,
+"stockReturnPct": -7.84
+},
+{
+"period": "1W",
+"ticker": "PANW",
+"points": -29.11,
+"stockReturnPct": -7.41
+},
+{
+"period": "1W",
+"ticker": "KLAC",
+"points": -25.69,
+"stockReturnPct": -8.6
+},
+{
+"period": "1W",
+"ticker": "AVGO",
+"points": -18.6,
+"stockReturnPct": -2.44
+},
+{
+"period": "1W",
+"ticker": "CRWD",
+"points": -12.96,
+"stockReturnPct": -3.99
+},
+{
+"period": "1W",
+"ticker": "MAR",
+"points": 10.94,
+"stockReturnPct": 8.65
+},
+{
+"period": "1W",
+"ticker": "WMT",
+"points": 10.16,
+"stockReturnPct": 1.41
+},
+{
+"period": "1W",
+"ticker": "MRNA",
+"points": 9.83,
+"stockReturnPct": 8.62
+},
+{
+"period": "1W",
+"ticker": "PEP",
+"points": 9.43,
+"stockReturnPct": 4.2
+},
+{
+"period": "1W",
+"ticker": "FTNT",
+"points": -9.42,
+"stockReturnPct": -5.43
+},
+{
+"period": "1W",
+"ticker": "COST",
+"points": 9.19,
+"stockReturnPct": 1.66
+},
+{
+"period": "1W",
+"ticker": "INTU",
+"points": 8.85,
+"stockReturnPct": 8.11
+},
+{
+"period": "1W",
+"ticker": "SBUX",
+"points": 8.43,
+"stockReturnPct": 6.25
+},
+{
+"period": "1W",
+"ticker": "VRTX",
+"points": 8.43,
+"stockReturnPct": 5.22
+},
+{
+"period": "1W",
+"ticker": "AMGN",
+"points": 8.41,
+"stockReturnPct": 2.87
+},
+{
+"period": "1W",
+"ticker": "NVDA",
+"points": 7.56,
+"stockReturnPct": 0.3
+},
+{
+"period": "1W",
+"ticker": "ADBE",
+"points": 7.41,
+"stockReturnPct": 5.97
+},
+{
+"period": "1W",
+"ticker": "ADP",
+"points": 7.24,
+"stockReturnPct": 5.06
+},
+{
+"period": "1W",
+"ticker": "QCOM",
+"points": 7.08,
+"stockReturnPct": 3.09
+},
+{
+"period": "1W",
+"ticker": "NXPI",
+"points": 7.03,
+"stockReturnPct": 9.75
+},
+{
+"period": "1W",
+"ticker": "SNPS",
+"points": -7.01,
+"stockReturnPct": -5.99
+},
+{
+"period": "1W",
+"ticker": "AAPL",
+"points": 7.01,
+"stockReturnPct": 0.3
+},
+{
+"period": "1W",
+"ticker": "WDC",
+"points": 6.37,
+"stockReturnPct": 3.96
+},
+{
+"period": "1W",
+"ticker": "ARM",
+"points": -6.09,
+"stockReturnPct": -4.8
+},
+{
+"period": "1W",
+"ticker": "MNST",
+"points": 6.04,
+"stockReturnPct": 5.45
+},
+{
+"period": "1W",
+"ticker": "CTAS",
+"points": 5.95,
+"stockReturnPct": 5.52
+},
+{
+"period": "1W",
+"ticker": "TMUS",
+"points": -5.59,
+"stockReturnPct": -2.56
+},
+{
+"period": "1W",
+"ticker": "STX",
+"points": -4.82,
+"stockReturnPct": -2.33
+},
+{
+"period": "1W",
+"ticker": "SNDK",
+"points": -4.81,
+"stockReturnPct": -1.79
+},
+{
+"period": "1W",
+"ticker": "TRI",
+"points": 4.77,
+"stockReturnPct": 9.35
+},
+{
+"period": "1W",
+"ticker": "CMCSA",
+"points": 4.77,
+"stockReturnPct": 4.89
+},
+{
+"period": "1W",
+"ticker": "TXN",
+"points": 4.64,
+"stockReturnPct": 1.43
+},
+{
+"period": "1W",
+"ticker": "LIN",
+"points": 4.6,
+"stockReturnPct": 1.6
+},
+{
+"period": "1W",
+"ticker": "LITE",
+"points": -4.47,
+"stockReturnPct": -5.09
+},
+{
+"period": "1W",
+"ticker": "MSTR",
+"points": 4.33,
+"stockReturnPct": 7.15
+},
+{
+"period": "1W",
+"ticker": "NBIS",
+"points": -4.12,
+"stockReturnPct": -7.76
+},
+{
+"period": "1W",
+"ticker": "RKLB",
+"points": -4.05,
+"stockReturnPct": -9.31
+},
+{
+"period": "1W",
+"ticker": "MCHP",
+"points": 4.02,
+"stockReturnPct": 8.28
+},
+{
+"period": "1W",
+"ticker": "CEG",
+"points": -4.01,
+"stockReturnPct": -3.15
+},
+{
+"period": "1W",
+"ticker": "ADSK",
+"points": 3.69,
+"stockReturnPct": 5.93
+},
+{
+"period": "1W",
+"ticker": "WDAY",
+"points": 3.6,
+"stockReturnPct": 7.52
+},
+{
+"period": "1W",
+"ticker": "REGN",
+"points": 3.6,
+"stockReturnPct": 3.51
+},
+{
+"period": "1W",
+"ticker": "ABNB",
+"points": 3.55,
+"stockReturnPct": 3.97
+},
+{
+"period": "1W",
+"ticker": "ISRG",
+"points": 3.52,
+"stockReturnPct": 1.88
+},
+{
+"period": "1W",
+"ticker": "ROP",
+"points": 3.23,
+"stockReturnPct": 6.67
+},
+{
+"period": "1W",
+"ticker": "ASML",
+"points": 3.15,
+"stockReturnPct": 1.62
+},
+{
+"period": "1W",
+"ticker": "HON",
+"points": 2.88,
+"stockReturnPct": 3.43
+},
+{
+"period": "1W",
+"ticker": "TER",
+"points": -2.86,
+"stockReturnPct": -3.88
+},
+{
+"period": "1W",
+"ticker": "SHOP",
+"points": 2.79,
+"stockReturnPct": 1.04
+},
+{
+"period": "1W",
+"ticker": "ORLY",
+"points": 2.64,
+"stockReturnPct": 2.9
+},
+{
+"period": "1W",
+"ticker": "MPWR",
+"points": 2.59,
+"stockReturnPct": 3.23
+},
+{
+"period": "1W",
+"ticker": "MSFT",
+"points": -2.56,
+"stockReturnPct": -0.14
+},
+{
+"period": "1W",
+"ticker": "IDXX",
+"points": 2.52,
+"stockReturnPct": 4.63
+},
+{
+"period": "1W",
+"ticker": "HONA",
+"points": 2.37,
+"stockReturnPct": 3.66
+},
+{
+"period": "1W",
+"ticker": "KDP",
+"points": 2.35,
+"stockReturnPct": 4.08
+},
+{
+"period": "1W",
+"ticker": "ALAB",
+"points": -2.27,
+"stockReturnPct": -3.4
+},
+{
+"period": "1W",
+"ticker": "BKNG",
+"points": -2.26,
+"stockReturnPct": -1.43
+},
+{
+"period": "1W",
+"ticker": "APP",
+"points": 2.23,
+"stockReturnPct": 2.18
+},
+{
+"period": "1W",
+"ticker": "PDD",
+"points": -2.21,
+"stockReturnPct": -3.35
+},
+{
+"period": "1W",
+"ticker": "CRWV",
+"points": -2.2,
+"stockReturnPct": -6.02
+},
+{
+"period": "1W",
+"ticker": "PLTR",
+"points": 2.18,
+"stockReturnPct": 0.37
+},
+{
+"period": "1W",
+"ticker": "PAYX",
+"points": 1.9,
+"stockReturnPct": 3.81
+},
+{
+"period": "1W",
+"ticker": "CCEP",
+"points": 1.71,
+"stockReturnPct": 2.86
+},
+{
+"period": "1W",
+"ticker": "DDOG",
+"points": 1.6,
+"stockReturnPct": 1.4
+},
+{
+"period": "1W",
+"ticker": "CPRT",
+"points": 1.54,
+"stockReturnPct": 5.01
+},
+{
+"period": "1W",
+"ticker": "DXCM",
+"points": -1.51,
+"stockReturnPct": -3.85
+},
+{
+"period": "1W",
+"ticker": "ADI",
+"points": 1.49,
+"stockReturnPct": 0.59
+},
+{
+"period": "1W",
+"ticker": "ROST",
+"points": 1.49,
+"stockReturnPct": 1.57
+},
+{
+"period": "1W",
+"ticker": "PYPL",
+"points": 1.27,
+"stockReturnPct": 1.96
+},
+{
+"period": "1W",
+"ticker": "ODFL",
+"points": 1.24,
+"stockReturnPct": 2.46
+},
+{
+"period": "1W",
+"ticker": "FANG",
+"points": 1.21,
+"stockReturnPct": 1.73
+},
+{
+"period": "1W",
+"ticker": "CDNS",
+"points": -1.19,
+"stockReturnPct": -1.03
+},
+{
+"period": "1W",
+"ticker": "TTWO",
+"points": 1.17,
+"stockReturnPct": 2.45
+},
+{
+"period": "1W",
+"ticker": "PCAR",
+"points": 1.13,
+"stockReturnPct": 1.53
+},
+{
+"period": "1W",
+"ticker": "XEL",
+"points": 1.12,
+"stockReturnPct": 1.88
+},
+{
+"period": "1W",
+"ticker": "MELI",
+"points": 1.01,
+"stockReturnPct": 0.86
+},
+{
+"period": "1W",
+"ticker": "AEP",
+"points": 0.88,
+"stockReturnPct": 1.0
+},
+{
+"period": "1W",
+"ticker": "BKR",
+"points": 0.78,
+"stockReturnPct": 1.14
+},
+{
+"period": "1W",
+"ticker": "FAST",
+"points": 0.71,
+"stockReturnPct": 0.94
+},
+{
+"period": "1W",
+"ticker": "MU",
+"points": -0.66,
+"stockReturnPct": -0.05
+},
+{
+"period": "1W",
+"ticker": "AXON",
+"points": -0.6,
+"stockReturnPct": -1.43
+},
+{
+"period": "1W",
+"ticker": "MRVL",
+"points": -0.59,
+"stockReturnPct": -0.21
+},
+{
+"period": "1W",
+"ticker": "EXC",
+"points": 0.57,
+"stockReturnPct": 1.06
+},
+{
+"period": "1W",
+"ticker": "GEHC",
+"points": 0.31,
+"stockReturnPct": 0.79
+},
+{
+"period": "1W",
+"ticker": "CSX",
+"points": 0.29,
+"stockReturnPct": 0.25
+},
+{
+"period": "1W",
+"ticker": "MDLZ",
+"points": 0.27,
+"stockReturnPct": 0.27
+},
+{
+"period": "1W",
+"ticker": "DASH",
+"points": 0.23,
+"stockReturnPct": 0.24
+},
+{
+"period": "1W",
+"ticker": "FER",
+"points": -0.22,
+"stockReturnPct": -0.34
+},
+{
+"period": "1W",
+"ticker": "ALNY",
+"points": 0.11,
+"stockReturnPct": 0.28
+},
+{
+"period": "1W",
+"ticker": "GILD",
+"points": 0.05,
+"stockReturnPct": 0.02
+},
+{
+"period": "1M",
+"ticker": "MU",
+"points": -188.08,
+"stockReturnPct": -12.48
+},
+{
+"period": "1M",
+"ticker": "INTC",
+"points": -183.41,
+"stockReturnPct": -23.67
+},
+{
+"period": "1M",
+"ticker": "AMD",
+"points": -130.64,
+"stockReturnPct": -10.2
+},
+{
+"period": "1M",
+"ticker": "MSFT",
+"points": 108.23,
+"stockReturnPct": 6.25
+},
+{
+"period": "1M",
+"ticker": "SNDK",
+"points": -74.41,
+"stockReturnPct": -21.99
+},
+{
+"period": "1M",
+"ticker": "LRCX",
+"points": -66.51,
+"stockReturnPct": -13.72
+},
+{
+"period": "1M",
+"ticker": "WMT",
+"points": 64.18,
+"stockReturnPct": 9.64
+},
+{
+"period": "1M",
+"ticker": "NVDA",
+"points": -61.06,
+"stockReturnPct": -2.38
+},
+{
+"period": "1M",
+"ticker": "META",
+"points": -60.29,
+"stockReturnPct": -5.9
+},
+{
+"period": "1M",
+"ticker": "SHOP",
+"points": 56.65,
+"stockReturnPct": 26.37
+},
+{
+"period": "1M",
+"ticker": "COST",
+"points": 56.26,
+"stockReturnPct": 11.11
+},
+{
+"period": "1M",
+"ticker": "AMAT",
+"points": -55.34,
+"stockReturnPct": -11.91
+},
+{
+"period": "1M",
+"ticker": "AVGO",
+"points": -54.71,
+"stockReturnPct": -6.85
+},
+{
+"period": "1M",
+"ticker": "GOOGL",
+"points": -54.35,
+"stockReturnPct": -5.69
+},
+{
+"period": "1M",
+"ticker": "PLTR",
+"points": 54.22,
+"stockReturnPct": 10.18
+},
+{
+"period": "1M",
+"ticker": "STX",
+"points": -52.24,
+"stockReturnPct": -20.57
+},
+{
+"period": "1M",
+"ticker": "ARM",
+"points": -51.35,
+"stockReturnPct": -29.83
+},
+{
+"period": "1M",
+"ticker": "GOOG",
+"points": -50.5,
+"stockReturnPct": -5.68
+},
+{
+"period": "1M",
+"ticker": "NFLX",
+"points": -44.22,
+"stockReturnPct": -11.34
+},
+{
+"period": "1M",
+"ticker": "SPCX",
+"points": 40.5,
+"stockReturnPct": 4.91
+},
+{
+"period": "1M",
+"ticker": "KLAC",
+"points": -34.31,
+"stockReturnPct": -11.16
+},
+{
+"period": "1M",
+"ticker": "AAPL",
+"points": 34.1,
+"stockReturnPct": 1.48
+},
+{
+"period": "1M",
+"ticker": "AMGN",
+"points": 31.07,
+"stockReturnPct": 11.49
+},
+{
+"period": "1M",
+"ticker": "WDC",
+"points": -30.78,
+"stockReturnPct": -15.54
+},
+{
+"period": "1M",
+"ticker": "TSLA",
+"points": 25.95,
+"stockReturnPct": 2.98
+},
+{
+"period": "1M",
+"ticker": "PANW",
+"points": -25.67,
+"stockReturnPct": -6.59
+},
+{
+"period": "1M",
+"ticker": "LIN",
+"points": 25.16,
+"stockReturnPct": 9.41
+},
+{
+"period": "1M",
+"ticker": "MRNA",
+"points": 24.59,
+"stockReturnPct": 24.78
+},
+{
+"period": "1M",
+"ticker": "APP",
+"points": -24.31,
+"stockReturnPct": -18.86
+},
+{
+"period": "1M",
+"ticker": "QCOM",
+"points": -21.56,
+"stockReturnPct": -8.38
+},
+{
+"period": "1M",
+"ticker": "CSCO",
+"points": -21.16,
+"stockReturnPct": -3.77
+},
+{
+"period": "1M",
+"ticker": "MAR",
+"points": 20.86,
+"stockReturnPct": 17.9
+},
+{
+"period": "1M",
+"ticker": "AMZN",
+"points": 19.48,
+"stockReturnPct": 1.52
+},
+{
+"period": "1M",
+"ticker": "NBIS",
+"points": -17.45,
+"stockReturnPct": -26.3
+},
+{
+"period": "1M",
+"ticker": "TXN",
+"points": 15.97,
+"stockReturnPct": 5.09
+},
+{
+"period": "1M",
+"ticker": "TMUS",
+"points": -15.95,
+"stockReturnPct": -6.97
+},
+{
+"period": "1M",
+"ticker": "MRVL",
+"points": -14.33,
+"stockReturnPct": -4.9
+},
+{
+"period": "1M",
+"ticker": "ADI",
+"points": 14.3,
+"stockReturnPct": 5.99
+},
+{
+"period": "1M",
+"ticker": "CRWV",
+"points": -13.11,
+"stockReturnPct": -27.64
+},
+{
+"period": "1M",
+"ticker": "CRWD",
+"points": -13.03,
+"stockReturnPct": -4.01
+},
+{
+"period": "1M",
+"ticker": "ADP",
+"points": 12.54,
+"stockReturnPct": 9.1
+},
+{
+"period": "1M",
+"ticker": "SNPS",
+"points": 12.04,
+"stockReturnPct": 12.28
+},
+{
+"period": "1M",
+"ticker": "CTAS",
+"points": 12.02,
+"stockReturnPct": 11.82
+},
+{
+"period": "1M",
+"ticker": "DDOG",
+"points": 11.94,
+"stockReturnPct": 11.44
+},
+{
+"period": "1M",
+"ticker": "RKLB",
+"points": -11.91,
+"stockReturnPct": -23.21
+},
+{
+"period": "1M",
+"ticker": "ISRG",
+"points": 11.81,
+"stockReturnPct": 6.59
+},
+{
+"period": "1M",
+"ticker": "ALAB",
+"points": -11.25,
+"stockReturnPct": -14.87
+},
+{
+"period": "1M",
+"ticker": "INTU",
+"points": 11.07,
+"stockReturnPct": 10.35
+},
+{
+"period": "1M",
+"ticker": "CDNS",
+"points": 10.92,
+"stockReturnPct": 10.57
+},
+{
+"period": "1M",
+"ticker": "LITE",
+"points": -10.16,
+"stockReturnPct": -10.87
+},
+{
+"period": "1M",
+"ticker": "BKNG",
+"points": -9.96,
+"stockReturnPct": -6.02
+},
+{
+"period": "1M",
+"ticker": "TRI",
+"points": 9.6,
+"stockReturnPct": 20.78
+},
+{
+"period": "1M",
+"ticker": "PEP",
+"points": 8.88,
+"stockReturnPct": 3.94
+},
+{
+"period": "1M",
+"ticker": "FER",
+"points": -7.62,
+"stockReturnPct": -10.6
+},
+{
+"period": "1M",
+"ticker": "TER",
+"points": -7.39,
+"stockReturnPct": -9.45
+},
+{
+"period": "1M",
+"ticker": "ADSK",
+"points": 7.0,
+"stockReturnPct": 11.88
+},
+{
+"period": "1M",
+"ticker": "KDP",
+"points": 6.71,
+"stockReturnPct": 12.57
+},
+{
+"period": "1M",
+"ticker": "ORLY",
+"points": 6.66,
+"stockReturnPct": 7.63
+},
+{
+"period": "1M",
+"ticker": "MNST",
+"points": 6.59,
+"stockReturnPct": 5.98
+},
+{
+"period": "1M",
+"ticker": "MSTR",
+"points": -6.35,
+"stockReturnPct": -8.91
+},
+{
+"period": "1M",
+"ticker": "SBUX",
+"points": 6.05,
+"stockReturnPct": 4.4
+},
+{
+"period": "1M",
+"ticker": "CSX",
+"points": 5.76,
+"stockReturnPct": 5.24
+},
+{
+"period": "1M",
+"ticker": "CCEP",
+"points": 5.44,
+"stockReturnPct": 9.71
+},
+{
+"period": "1M",
+"ticker": "PYPL",
+"points": 5.3,
+"stockReturnPct": 8.7
+},
+{
+"period": "1M",
+"ticker": "AEP",
+"points": 5.16,
+"stockReturnPct": 6.13
+},
+{
+"period": "1M",
+"ticker": "AXON",
+"points": -5.07,
+"stockReturnPct": -10.94
+},
+{
+"period": "1M",
+"ticker": "DASH",
+"points": -4.92,
+"stockReturnPct": -4.84
+},
+{
+"period": "1M",
+"ticker": "GILD",
+"points": 4.75,
+"stockReturnPct": 2.0
+},
+{
+"period": "1M",
+"ticker": "VRTX",
+"points": 4.47,
+"stockReturnPct": 2.7
+},
+{
+"period": "1M",
+"ticker": "DXCM",
+"points": -4.18,
+"stockReturnPct": -9.99
+},
+{
+"period": "1M",
+"ticker": "ROP",
+"points": 4.18,
+"stockReturnPct": 8.8
+},
+{
+"period": "1M",
+"ticker": "MDLZ",
+"points": 4.16,
+"stockReturnPct": 4.27
+},
+{
+"period": "1M",
+"ticker": "FANG",
+"points": 4.14,
+"stockReturnPct": 6.16
+},
+{
+"period": "1M",
+"ticker": "FAST",
+"points": 4.11,
+"stockReturnPct": 5.72
+},
+{
+"period": "1M",
+"ticker": "ASML",
+"points": -4.09,
+"stockReturnPct": -2.02
+},
+{
+"period": "1M",
+"ticker": "IDXX",
+"points": 3.93,
+"stockReturnPct": 7.41
+},
+{
+"period": "1M",
+"ticker": "CMCSA",
+"points": -3.93,
+"stockReturnPct": -3.71
+},
+{
+"period": "1M",
+"ticker": "CEG",
+"points": 3.93,
+"stockReturnPct": 3.29
+},
+{
+"period": "1M",
+"ticker": "XEL",
+"points": 3.88,
+"stockReturnPct": 6.86
+},
+{
+"period": "1M",
+"ticker": "ODFL",
+"points": 3.72,
+"stockReturnPct": 7.72
+},
+{
+"period": "1M",
+"ticker": "ABNB",
+"points": 3.67,
+"stockReturnPct": 4.11
+},
+{
+"period": "1M",
+"ticker": "ALNY",
+"points": -3.35,
+"stockReturnPct": -7.87
+},
+{
+"period": "1M",
+"ticker": "HON",
+"points": 3.34,
+"stockReturnPct": 4.0
+},
+{
+"period": "1M",
+"ticker": "NXPI",
+"points": 3.25,
+"stockReturnPct": 4.28
+},
+{
+"period": "1M",
+"ticker": "PCAR",
+"points": -3.06,
+"stockReturnPct": -3.93
+},
+{
+"period": "1M",
+"ticker": "ADBE",
+"points": 2.85,
+"stockReturnPct": 2.22
+},
+{
+"period": "1M",
+"ticker": "WDAY",
+"points": 2.8,
+"stockReturnPct": 5.75
+},
+{
+"period": "1M",
+"ticker": "HONA",
+"points": -2.72,
+"stockReturnPct": -3.89
+},
+{
+"period": "1M",
+"ticker": "GEHC",
+"points": 2.41,
+"stockReturnPct": 6.48
+},
+{
+"period": "1M",
+"ticker": "BKR",
+"points": -2.27,
+"stockReturnPct": -3.16
+},
+{
+"period": "1M",
+"ticker": "MELI",
+"points": 2.21,
+"stockReturnPct": 1.89
+},
+{
+"period": "1M",
+"ticker": "MCHP",
+"points": 1.62,
+"stockReturnPct": 3.17
+},
+{
+"period": "1M",
+"ticker": "CPRT",
+"points": -1.55,
+"stockReturnPct": -4.58
+},
+{
+"period": "1M",
+"ticker": "EXC",
+"points": 1.36,
+"stockReturnPct": 2.55
+},
+{
+"period": "1M",
+"ticker": "ROST",
+"points": 1.21,
+"stockReturnPct": 1.27
+},
+{
+"period": "1M",
+"ticker": "PAYX",
+"points": -1.15,
+"stockReturnPct": -2.18
+},
+{
+"period": "1M",
+"ticker": "FTNT",
+"points": -1.11,
+"stockReturnPct": -0.67
+},
+{
+"period": "1M",
+"ticker": "REGN",
+"points": 0.99,
+"stockReturnPct": 0.94
+},
+{
+"period": "1M",
+"ticker": "TTWO",
+"points": -0.89,
+"stockReturnPct": -1.79
+},
+{
+"period": "1M",
+"ticker": "PDD",
+"points": -0.47,
+"stockReturnPct": -0.73
+},
+{
+"period": "1M",
+"ticker": "MPWR",
+"points": 0.36,
+"stockReturnPct": 0.44
+},
+{
+"period": "YTD",
+"ticker": "MU",
+"points": 906.93,
+"stockReturnPct": 220.13
+},
+{
+"period": "YTD",
+"ticker": "AMD",
+"points": 704.32,
+"stockReturnPct": 158.09
+},
+{
+"period": "YTD",
+"ticker": "AAPL",
+"points": 491.02,
+"stockReturnPct": 26.53
+},
+{
+"period": "YTD",
+"ticker": "NVDA",
+"points": 400.36,
+"stockReturnPct": 19.02
+},
+{
+"period": "YTD",
+"ticker": "INTC",
+"points": 356.77,
+"stockReturnPct": 151.92
+},
+{
+"period": "YTD",
+"ticker": "MRVL",
+"points": 181.48,
+"stockReturnPct": 188.02
+},
+{
+"period": "YTD",
+"ticker": "PANW",
+"points": 170.79,
+"stockReturnPct": 88.52
+},
+{
+"period": "YTD",
+"ticker": "MSFT",
+"points": 170.36,
+"stockReturnPct": 10.2
+},
+{
+"period": "YTD",
+"ticker": "CRWD",
+"points": 159.06,
+"stockReturnPct": 104.23
+},
+{
+"period": "YTD",
+"ticker": "APP",
+"points": -158.45,
+"stockReturnPct": -60.24
+},
+{
+"period": "YTD",
+"ticker": "AMZN",
+"points": 156.77,
+"stockReturnPct": 13.67
+},
+{
+"period": "YTD",
+"ticker": "NFLX",
+"points": -152.64,
+"stockReturnPct": -30.63
+},
+{
+"period": "YTD",
+"ticker": "CSCO",
+"points": 152.28,
+"stockReturnPct": 39.24
+},
+{
+"period": "YTD",
+"ticker": "AMAT",
+"points": 152.07,
+"stockReturnPct": 59.13
+},
+{
+"period": "YTD",
+"ticker": "TSLA",
+"points": -146.93,
+"stockReturnPct": -14.06
+},
+{
+"period": "YTD",
+"ticker": "LRCX",
+"points": 143.76,
+"stockReturnPct": 52.36
+},
+{
+"period": "YTD",
+"ticker": "TXN",
+"points": 128.83,
+"stockReturnPct": 64.07
+},
+{
+"period": "YTD",
+"ticker": "STX",
+"points": 122.03,
+"stockReturnPct": 153.06
+},
+{
+"period": "YTD",
+"ticker": "INTU",
+"points": -114.87,
+"stockReturnPct": -49.34
+},
+{
+"period": "YTD",
+"ticker": "WDC",
+"points": 91.13,
+"stockReturnPct": 119.72
+},
+{
+"period": "YTD",
+"ticker": "FTNT",
+"points": 89.13,
+"stockReturnPct": 119.18
+},
+{
+"period": "YTD",
+"ticker": "SNDK",
+"points": 87.6,
+"stockReturnPct": 49.65
+},
+{
+"period": "YTD",
+"ticker": "ADI",
+"points": 83.9,
+"stockReturnPct": 49.69
+},
+{
+"period": "YTD",
+"ticker": "COST",
+"points": 76.63,
+"stockReturnPct": 15.77
+},
+{
+"period": "YTD",
+"ticker": "AMGN",
+"points": 76.35,
+"stockReturnPct": 33.92
+},
+{
+"period": "YTD",
+"ticker": "ASML",
+"points": 71.66,
+"stockReturnPct": 56.72
+},
+{
+"period": "YTD",
+"ticker": "KLAC",
+"points": 70.04,
+"stockReturnPct": 34.5
+},
+{
+"period": "YTD",
+"ticker": "PLTR",
+"points": 69.76,
+"stockReturnPct": 13.49
+},
+{
+"period": "YTD",
+"ticker": "TMUS",
+"points": -68.26,
+"stockReturnPct": -24.28
+},
+{
+"period": "YTD",
+"ticker": "ARM",
+"points": 62.53,
+"stockReturnPct": 107.29
+},
+{
+"period": "YTD",
+"ticker": "ISRG",
+"points": -61.69,
+"stockReturnPct": -24.41
+},
+{
+"period": "YTD",
+"ticker": "GOOGL",
+"points": 58.51,
+"stockReturnPct": 6.95
+},
+{
+"period": "YTD",
+"ticker": "DDOG",
+"points": 58.4,
+"stockReturnPct": 100.82
+},
+{
+"period": "YTD",
+"ticker": "BKNG",
+"points": -54.83,
+"stockReturnPct": -26.06
+},
+{
+"period": "YTD",
+"ticker": "META",
+"points": 51.61,
+"stockReturnPct": 5.67
+},
+{
+"period": "YTD",
+"ticker": "ADBE",
+"points": -48.89,
+"stockReturnPct": -27.12
+},
+{
+"period": "YTD",
+"ticker": "GILD",
+"points": 48.7,
+"stockReturnPct": 25.12
+},
+{
+"period": "YTD",
+"ticker": "GOOG",
+"points": 43.48,
+"stockReturnPct": 5.47
+},
+{
+"period": "YTD",
+"ticker": "LIN",
+"points": 43.34,
+"stockReturnPct": 17.4
+},
+{
+"period": "YTD",
+"ticker": "RKLB",
+"points": -39.33,
+"stockReturnPct": -49.95
+},
+{
+"period": "YTD",
+"ticker": "CEG",
+"points": -37.58,
+"stockReturnPct": -23.36
+},
+{
+"period": "YTD",
+"ticker": "NBIS",
+"points": -32.81,
+"stockReturnPct": -40.15
+},
+{
+"period": "YTD",
+"ticker": "MAR",
+"points": 31.88,
+"stockReturnPct": 30.22
+},
+{
+"period": "YTD",
+"ticker": "CRWV",
+"points": -31.16,
+"stockReturnPct": -47.59
+},
+{
+"period": "YTD",
+"ticker": "HONA",
+"points": -31.11,
+"stockReturnPct": -31.65
+},
+{
+"period": "YTD",
+"ticker": "ALNY",
+"points": -30.1,
+"stockReturnPct": -43.39
+},
+{
+"period": "YTD",
+"ticker": "CSX",
+"points": 29.06,
+"stockReturnPct": 33.52
+},
+{
+"period": "YTD",
+"ticker": "ALAB",
+"points": -28.2,
+"stockReturnPct": -30.45
+},
+{
+"period": "YTD",
+"ticker": "PDD",
+"points": -28.08,
+"stockReturnPct": -30.58
+},
+{
+"period": "YTD",
+"ticker": "CMCSA",
+"points": -27.86,
+"stockReturnPct": -21.42
+},
+{
+"period": "YTD",
+"ticker": "MRNA",
+"points": 24.59,
+"stockReturnPct": 24.78
+},
+{
+"period": "YTD",
+"ticker": "MPWR",
+"points": 24.3,
+"stockReturnPct": 41.59
+},
+{
+"period": "YTD",
+"ticker": "VRTX",
+"points": 23.05,
+"stockReturnPct": 15.7
+},
+{
+"period": "YTD",
+"ticker": "ROST",
+"points": 22.26,
+"stockReturnPct": 30.0
+},
+{
+"period": "YTD",
+"ticker": "DASH",
+"points": -22.06,
+"stockReturnPct": -18.56
+},
+{
+"period": "YTD",
+"ticker": "SBUX",
+"points": 21.51,
+"stockReturnPct": 17.66
+},
+{
+"period": "YTD",
+"ticker": "MNST",
+"points": 20.78,
+"stockReturnPct": 21.64
+},
+{
+"period": "YTD",
+"ticker": "SHOP",
+"points": 20.75,
+"stockReturnPct": 8.27
+},
+{
+"period": "YTD",
+"ticker": "ABNB",
+"points": 20.36,
+"stockReturnPct": 27.98
+},
+{
+"period": "YTD",
+"ticker": "ADP",
+"points": 19.03,
+"stockReturnPct": 14.49
+},
+{
+"period": "YTD",
+"ticker": "TER",
+"points": -18.94,
+"stockReturnPct": -21.11
+},
+{
+"period": "YTD",
+"ticker": "FER",
+"points": -18.74,
+"stockReturnPct": -22.58
+},
+{
+"period": "YTD",
+"ticker": "AVGO",
+"points": -18.27,
+"stockReturnPct": -2.4
+},
+{
+"period": "YTD",
+"ticker": "FANG",
+"points": 17.96,
+"stockReturnPct": 33.66
+},
+{
+"period": "YTD",
+"ticker": "FAST",
+"points": 17.88,
+"stockReturnPct": 30.8
+},
+{
+"period": "YTD",
+"ticker": "AXON",
+"points": -16.95,
+"stockReturnPct": -29.11
+},
+{
+"period": "YTD",
+"ticker": "CTAS",
+"points": 16.57,
+"stockReturnPct": 17.06
+},
+{
+"period": "YTD",
+"ticker": "PEP",
+"points": -15.32,
+"stockReturnPct": -6.15
+},
+{
+"period": "YTD",
+"ticker": "MDLZ",
+"points": 14.41,
+"stockReturnPct": 16.55
+},
+{
+"period": "YTD",
+"ticker": "ADSK",
+"points": -13.78,
+"stockReturnPct": -17.29
+},
+{
+"period": "YTD",
+"ticker": "CPRT",
+"points": -13.55,
+"stockReturnPct": -29.54
+},
+{
+"period": "YTD",
+"ticker": "BKR",
+"points": 12.97,
+"stockReturnPct": 22.97
+},
+{
+"period": "YTD",
+"ticker": "IDXX",
+"points": -12.68,
+"stockReturnPct": -18.19
+},
+{
+"period": "YTD",
+"ticker": "TTWO",
+"points": -11.79,
+"stockReturnPct": -19.48
+},
+{
+"period": "YTD",
+"ticker": "WMT",
+"points": -11.77,
+"stockReturnPct": -1.59
+},
+{
+"period": "YTD",
+"ticker": "LITE",
+"points": -11.74,
+"stockReturnPct": -12.36
+},
+{
+"period": "YTD",
+"ticker": "KDP",
+"points": 11.26,
+"stockReturnPct": 23.06
+},
+{
+"period": "YTD",
+"ticker": "CCEP",
+"points": 10.92,
+"stockReturnPct": 21.6
+},
+{
+"period": "YTD",
+"ticker": "MELI",
+"points": -10.24,
+"stockReturnPct": -7.91
+},
+{
+"period": "YTD",
+"ticker": "MCHP",
+"points": 9.16,
+"stockReturnPct": 21.08
+},
+{
+"period": "YTD",
+"ticker": "QCOM",
+"points": 9.16,
+"stockReturnPct": 4.04
+},
+{
+"period": "YTD",
+"ticker": "TRI",
+"points": -9.05,
+"stockReturnPct": -13.96
+},
+{
+"period": "YTD",
+"ticker": "ODFL",
+"points": 8.82,
+"stockReturnPct": 20.47
+},
+{
+"period": "YTD",
+"ticker": "AEP",
+"points": 8.46,
+"stockReturnPct": 10.48
+},
+{
+"period": "YTD",
+"ticker": "NXPI",
+"points": 8.26,
+"stockReturnPct": 11.66
+},
+{
+"period": "YTD",
+"ticker": "GEHC",
+"points": -7.45,
+"stockReturnPct": -15.86
+},
+{
+"period": "YTD",
+"ticker": "DXCM",
+"points": 6.52,
+"stockReturnPct": 20.93
+},
+{
+"period": "YTD",
+"ticker": "ROP",
+"points": -6.18,
+"stockReturnPct": -10.69
+},
+{
+"period": "YTD",
+"ticker": "SPCX",
+"points": -6.03,
+"stockReturnPct": -0.69
+},
+{
+"period": "YTD",
+"ticker": "CDNS",
+"points": 4.73,
+"stockReturnPct": 4.32
+},
+{
+"period": "YTD",
+"ticker": "SNPS",
+"points": -4.52,
+"stockReturnPct": -3.94
+},
+{
+"period": "YTD",
+"ticker": "REGN",
+"points": 4.45,
+"stockReturnPct": 4.38
+},
+{
+"period": "YTD",
+"ticker": "HON",
+"points": 4.09,
+"stockReturnPct": 4.95
+},
+{
+"period": "YTD",
+"ticker": "WDAY",
+"points": -3.0,
+"stockReturnPct": -5.5
+},
+{
+"period": "YTD",
+"ticker": "XEL",
+"points": 2.3,
+"stockReturnPct": 3.95
+},
+{
+"period": "YTD",
+"ticker": "ORLY",
+"points": -2.12,
+"stockReturnPct": -2.2
+},
+{
+"period": "YTD",
+"ticker": "PYPL",
+"points": -1.37,
+"stockReturnPct": -2.02
+},
+{
+"period": "YTD",
+"ticker": "EXC",
+"points": -0.69,
+"stockReturnPct": -1.24
+},
+{
+"period": "YTD",
+"ticker": "MSTR",
+"points": 0.65,
+"stockReturnPct": 1.01
+},
+{
+"period": "YTD",
+"ticker": "PCAR",
+"points": 0.48,
+"stockReturnPct": 0.65
+},
+{
+"period": "YTD",
+"ticker": "PAYX",
+"points": 0.15,
+"stockReturnPct": 0.29
+},
+{
+"period": "1Y",
+"ticker": "MU",
+"points": 1026.92,
+"stockReturnPct": 351.66
+},
+{
+"period": "1Y",
+"ticker": "AMD",
+"points": 654.66,
+"stockReturnPct": 132.21
+},
+{
+"period": "1Y",
+"ticker": "AAPL",
+"points": 552.9,
+"stockReturnPct": 30.91
+},
+{
+"period": "1Y",
+"ticker": "NVDA",
+"points": 460.63,
+"stockReturnPct": 22.53
+},
+{
+"period": "1Y",
+"ticker": "INTC",
+"points": 349.01,
+"stockReturnPct": 143.86
+},
+{
+"period": "1Y",
+"ticker": "NFLX",
+"points": -314.07,
+"stockReturnPct": -47.61
+},
+{
+"period": "1Y",
+"ticker": "GOOGL",
+"points": 226.69,
+"stockReturnPct": 33.66
+},
+{
+"period": "1Y",
+"ticker": "GOOG",
+"points": 201.82,
+"stockReturnPct": 31.67
+},
+{
+"period": "1Y",
+"ticker": "AMZN",
+"points": 200.45,
+"stockReturnPct": 18.17
+},
+{
+"period": "1Y",
+"ticker": "LRCX",
+"points": 185.69,
+"stockReturnPct": 79.82
+},
+{
+"period": "1Y",
+"ticker": "CSCO",
+"points": 184.06,
+"stockReturnPct": 51.67
+},
+{
+"period": "1Y",
+"ticker": "AMAT",
+"points": 183.09,
+"stockReturnPct": 80.95
+},
+{
+"period": "1Y",
+"ticker": "MRVL",
+"points": 182.3,
+"stockReturnPct": 190.48
+},
+{
+"period": "1Y",
+"ticker": "CRWD",
+"points": 147.6,
+"stockReturnPct": 89.97
+},
+{
+"period": "1Y",
+"ticker": "PANW",
+"points": 139.16,
+"stockReturnPct": 61.96
+},
+{
+"period": "1Y",
+"ticker": "TSLA",
+"points": -130.39,
+"stockReturnPct": -12.68
+},
+{
+"period": "1Y",
+"ticker": "TXN",
+"points": 120.32,
+"stockReturnPct": 57.4
+},
+{
+"period": "1Y",
+"ticker": "INTU",
+"points": -119.31,
+"stockReturnPct": -50.28
+},
+{
+"period": "1Y",
+"ticker": "STX",
+"points": 115.96,
+"stockReturnPct": 135.15
+},
+{
+"period": "1Y",
+"ticker": "APP",
+"points": -111.15,
+"stockReturnPct": -51.52
+},
+{
+"period": "1Y",
+"ticker": "TMUS",
+"points": -104.32,
+"stockReturnPct": -32.88
+},
+{
+"period": "1Y",
+"ticker": "ADI",
+"points": 99.36,
+"stockReturnPct": 64.78
+},
+{
+"period": "1Y",
+"ticker": "AMGN",
+"points": 94.34,
+"stockReturnPct": 45.56
+},
+{
+"period": "1Y",
+"ticker": "SNDK",
+"points": 87.6,
+"stockReturnPct": 49.65
+},
+{
+"period": "1Y",
+"ticker": "WDC",
+"points": 87.23,
+"stockReturnPct": 109.03
+},
+{
+"period": "1Y",
+"ticker": "FTNT",
+"points": 84.07,
+"stockReturnPct": 105.3
+},
+{
+"period": "1Y",
+"ticker": "KLAC",
+"points": 81.34,
+"stockReturnPct": 42.43
+},
+{
+"period": "1Y",
+"ticker": "ASML",
+"points": 76.96,
+"stockReturnPct": 63.58
+},
+{
+"period": "1Y",
+"ticker": "MSTR",
+"points": -62.78,
+"stockReturnPct": -49.16
+},
+{
+"period": "1Y",
+"ticker": "PLTR",
+"points": 58.82,
+"stockReturnPct": 11.13
+},
+{
+"period": "1Y",
+"ticker": "MSFT",
+"points": 52.8,
+"stockReturnPct": 2.95
+},
+{
+"period": "1Y",
+"ticker": "ADBE",
+"points": -52.79,
+"stockReturnPct": -28.66
+},
+{
+"period": "1Y",
+"ticker": "BKNG",
+"points": -52.11,
+"stockReturnPct": -25.09
+},
+{
+"period": "1Y",
+"ticker": "DDOG",
+"points": 49.77,
+"stockReturnPct": 74.78
+},
+{
+"period": "1Y",
+"ticker": "META",
+"points": -49.29,
+"stockReturnPct": -4.88
+},
+{
+"period": "1Y",
+"ticker": "GILD",
+"points": 46.58,
+"stockReturnPct": 23.77
+},
+{
+"period": "1Y",
+"ticker": "MAR",
+"points": 46.1,
+"stockReturnPct": 50.5
+},
+{
+"period": "1Y",
+"ticker": "PDD",
+"points": -42.11,
+"stockReturnPct": -39.78
+},
+{
+"period": "1Y",
+"ticker": "DASH",
+"points": -40.69,
+"stockReturnPct": -29.59
+},
+{
+"period": "1Y",
+"ticker": "CEG",
+"points": -40.09,
+"stockReturnPct": -24.54
+},
+{
+"period": "1Y",
+"ticker": "RKLB",
+"points": -39.33,
+"stockReturnPct": -49.95
+},
+{
+"period": "1Y",
+"ticker": "COST",
+"points": 34.27,
+"stockReturnPct": 6.49
+},
+{
+"period": "1Y",
+"ticker": "NBIS",
+"points": -32.81,
+"stockReturnPct": -40.15
+},
+{
+"period": "1Y",
+"ticker": "PEP",
+"points": -32.11,
+"stockReturnPct": -12.06
+},
+{
+"period": "1Y",
+"ticker": "ROST",
+"points": 32.04,
+"stockReturnPct": 49.72
+},
+{
+"period": "1Y",
+"ticker": "VRTX",
+"points": 31.83,
+"stockReturnPct": 23.05
+},
+{
+"period": "1Y",
+"ticker": "AXON",
+"points": -31.2,
+"stockReturnPct": -43.06
+},
+{
+"period": "1Y",
+"ticker": "CRWV",
+"points": -31.16,
+"stockReturnPct": -47.59
+},
+{
+"period": "1Y",
+"ticker": "HONA",
+"points": -31.11,
+"stockReturnPct": -31.65
+},
+{
+"period": "1Y",
+"ticker": "ALNY",
+"points": -30.55,
+"stockReturnPct": -43.76
+},
+{
+"period": "1Y",
+"ticker": "MNST",
+"points": 30.52,
+"stockReturnPct": 35.36
+},
+{
+"period": "1Y",
+"ticker": "ARM",
+"points": 30.5,
+"stockReturnPct": 33.78
+},
+{
+"period": "1Y",
+"ticker": "CSX",
+"points": 30.3,
+"stockReturnPct": 35.46
+},
+{
+"period": "1Y",
+"ticker": "REGN",
+"points": 29.81,
+"stockReturnPct": 39.07
+},
+{
+"period": "1Y",
+"ticker": "LIN",
+"points": 29.5,
+"stockReturnPct": 11.22
+},
+{
+"period": "1Y",
+"ticker": "CMCSA",
+"points": -28.2,
+"stockReturnPct": -21.63
+},
+{
+"period": "1Y",
+"ticker": "ALAB",
+"points": -28.2,
+"stockReturnPct": -30.45
+},
+{
+"period": "1Y",
+"ticker": "MRNA",
+"points": 24.59,
+"stockReturnPct": 24.78
+},
+{
+"period": "1Y",
+"ticker": "ABNB",
+"points": 24.19,
+"stockReturnPct": 35.1
+},
+{
+"period": "1Y",
+"ticker": "TRI",
+"points": -23.38,
+"stockReturnPct": -29.53
+},
+{
+"period": "1Y",
+"ticker": "MPWR",
+"points": 22.31,
+"stockReturnPct": 36.94
+},
+{
+"period": "1Y",
+"ticker": "CPRT",
+"points": -21.3,
+"stockReturnPct": -39.72
+},
+{
+"period": "1Y",
+"ticker": "FANG",
+"points": 21.09,
+"stockReturnPct": 41.97
+},
+{
+"period": "1Y",
+"ticker": "FER",
+"points": -21.03,
+"stockReturnPct": -24.66
+},
+{
+"period": "1Y",
+"ticker": "SBUX",
+"points": 19.06,
+"stockReturnPct": 15.34
+},
+{
+"period": "1Y",
+"ticker": "TER",
+"points": -18.94,
+"stockReturnPct": -21.11
+},
+{
+"period": "1Y",
+"ticker": "MELI",
+"points": -18.45,
+"stockReturnPct": -13.41
+},
+{
+"period": "1Y",
+"ticker": "SHOP",
+"points": 18.15,
+"stockReturnPct": 7.16
+},
+{
+"period": "1Y",
+"ticker": "ADSK",
+"points": -17.7,
+"stockReturnPct": -21.16
+},
+{
+"period": "1Y",
+"ticker": "ISRG",
+"points": -15.45,
+"stockReturnPct": -7.48
+},
+{
+"period": "1Y",
+"ticker": "ROP",
+"points": -15.2,
+"stockReturnPct": -22.73
+},
+{
+"period": "1Y",
+"ticker": "PYPL",
+"points": -14.87,
+"stockReturnPct": -18.34
+},
+{
+"period": "1Y",
+"ticker": "FAST",
+"points": 13.27,
+"stockReturnPct": 21.17
+},
+{
+"period": "1Y",
+"ticker": "TTWO",
+"points": -12.79,
+"stockReturnPct": -20.79
+},
+{
+"period": "1Y",
+"ticker": "ORLY",
+"points": -12.76,
+"stockReturnPct": -11.95
+},
+{
+"period": "1Y",
+"ticker": "ODFL",
+"points": 12.24,
+"stockReturnPct": 30.85
+},
+{
+"period": "1Y",
+"ticker": "CTAS",
+"points": 12.22,
+"stockReturnPct": 12.04
+},
+{
+"period": "1Y",
+"ticker": "QCOM",
+"points": 12.1,
+"stockReturnPct": 5.41
+},
+{
+"period": "1Y",
+"ticker": "KDP",
+"points": 11.85,
+"stockReturnPct": 24.58
+},
+{
+"period": "1Y",
+"ticker": "WMT",
+"points": -11.77,
+"stockReturnPct": -1.59
+},
+{
+"period": "1Y",
+"ticker": "LITE",
+"points": -11.74,
+"stockReturnPct": -12.36
+},
+{
+"period": "1Y",
+"ticker": "BKR",
+"points": 11.47,
+"stockReturnPct": 19.79
+},
+{
+"period": "1Y",
+"ticker": "WDAY",
+"points": -10.83,
+"stockReturnPct": -17.39
+},
+{
+"period": "1Y",
+"ticker": "AVGO",
+"points": -10.7,
+"stockReturnPct": -1.42
+},
+{
+"period": "1Y",
+"ticker": "CCEP",
+"points": 10.32,
+"stockReturnPct": 20.17
+},
+{
+"period": "1Y",
+"ticker": "IDXX",
+"points": -8.62,
+"stockReturnPct": -13.13
+},
+{
+"period": "1Y",
+"ticker": "PCAR",
+"points": 7.04,
+"stockReturnPct": 10.39
+},
+{
+"period": "1Y",
+"ticker": "AEP",
+"points": 6.98,
+"stockReturnPct": 8.48
+},
+{
+"period": "1Y",
+"ticker": "PAYX",
+"points": -6.91,
+"stockReturnPct": -11.79
+},
+{
+"period": "1Y",
+"ticker": "MCHP",
+"points": 6.57,
+"stockReturnPct": 14.26
+},
+{
+"period": "1Y",
+"ticker": "NXPI",
+"points": 6.54,
+"stockReturnPct": 9.0
+},
+{
+"period": "1Y",
+"ticker": "EXC",
+"points": -6.28,
+"stockReturnPct": -10.31
+},
+{
+"period": "1Y",
+"ticker": "SPCX",
+"points": -6.03,
+"stockReturnPct": -0.69
+},
+{
+"period": "1Y",
+"ticker": "ADP",
+"points": 5.37,
+"stockReturnPct": 3.7
+},
+{
+"period": "1Y",
+"ticker": "DXCM",
+"points": 4.93,
+"stockReturnPct": 15.07
+},
+{
+"period": "1Y",
+"ticker": "GEHC",
+"points": -4.06,
+"stockReturnPct": -9.32
+},
+{
+"period": "1Y",
+"ticker": "HON",
+"points": 3.26,
+"stockReturnPct": 3.9
+},
+{
+"period": "1Y",
+"ticker": "XEL",
+"points": -3.04,
+"stockReturnPct": -4.79
+},
+{
+"period": "1Y",
+"ticker": "CDNS",
+"points": -2.59,
+"stockReturnPct": -2.21
+},
+{
+"period": "1Y",
+"ticker": "SNPS",
+"points": -1.92,
+"stockReturnPct": -1.71
+},
+{
+"period": "1Y",
+"ticker": "MDLZ",
+"points": 1.6,
+"stockReturnPct": 1.6
+}
+],
+"index_moves": [
+{
+"period": "1D",
+"change": 332.24,
+"constituentSum": 330.38,
+"residual": 1.86
+},
+{
+"period": "1W",
+"change": -128.3,
+"constituentSum": -127.14,
+"residual": -1.16
+},
+{
+"period": "1M",
+"change": -659.83,
+"constituentSum": -647.86,
+"residual": -11.97
+},
+{
+"period": "YTD",
+"change": 4572.67,
+"constituentSum": 4577.33,
+"residual": -4.66
+},
+{
+"period": "1Y",
+"change": 4695.39,
+"constituentSum": 4620.02,
+"residual": 75.37
+}
+]
+}

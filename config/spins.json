@@ -1,0 +1,20 @@
+[
+ {
+  "ticker": "HON",
+  "ex_date": "2025-10-30",
+  "spinco": "SOLS",
+  "note": "Solstice Advanced Materials spin-off"
+ },
+ {
+  "ticker": "CMCSA",
+  "ex_date": "2026-01-05",
+  "spinco": "VSNT",
+  "note": "Versant Media spin-off"
+ },
+ {
+  "ticker": "HON",
+  "ex_date": "2026-06-29",
+  "spinco": "HONA",
+  "note": "Honeywell Aerospace spin-off (with 1-for-2 reverse split)"
+ }
+]
