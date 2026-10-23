@@ -28,10 +28,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
+      publish: ${{ steps.build.outputs.publish }}
       status: ${{ steps.build.outputs.status }}
       messages: ${{ steps.build.outputs.messages }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main          # latest main, even if a scheduled run starts late
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -49,15 +52,21 @@ jobs:
           git add data/log data/latest.json
           if ! git diff --cached --quiet; then
             git commit -m "data: update through latest close [skip ci]"
+            git pull --rebase origin main
             git push
           fi
       - uses: actions/configure-pages@v5
+        if: steps.build.outputs.publish == 'true'
       - uses: actions/upload-pages-artifact@v4
+        if: steps.build.outputs.publish == 'true'
         with:
           path: public
 
   deploy:
+    # Skipped when the fresh data is older than the published page (e.g. a run delayed into the
+    # evening, when Yahoo can drop the day's member prices): the current page stays up.
     needs: build
+    if: needs.build.outputs.publish == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -69,6 +78,7 @@ jobs:
   reconcile:
     # The page is published either way (with a warning banner); this job fails so you get notified.
     needs: [build, deploy]
+    if: needs.build.outputs.publish == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Check contributions add up to the index move

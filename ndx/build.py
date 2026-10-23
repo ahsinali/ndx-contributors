@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo("America/New_York")
 RECON_BP = 5.0          # max |index move - sum of contributions| on a day, in bp of the index
 STALE_DAYS = 4
+MIN_COVERAGE = 0.95   # share of current members that must have a close for a day to be used
 
 
 def load_seeds(folder: Path) -> dict[pd.Timestamp, pd.Series]:
@@ -54,11 +55,26 @@ def load_fixture(folder: Path):
     return close, opens, level
 
 
-def run(out: Path, fixture: Path | None = None, write_log: bool = True, now: dt.datetime | None = None) -> dict:
+def usable_close(close: pd.DataFrame, level: pd.Series, members: list[str]) -> pd.Timestamp:
+    """Latest date with an index close and closes for at least MIN_COVERAGE of members."""
+    coverage = close.reindex(index=level.index, columns=members).notna().mean(axis=1)
+    usable = coverage[coverage >= MIN_COVERAGE].index
+    if usable.empty:
+        raise SystemExit("No day with prices for the index and its members.")
+    return usable[-1]
+
+
+class NotPublished(Exception):
+    """The fresh data is older than what is already published; keep the current page."""
+
+
+def run(out: Path, fixture: Path | None = None, write_log: bool = True, now: dt.datetime | None = None,
+        log_dir: Path | None = None) -> dict:
     members = json.loads((ROOT / "config/members.json").read_text())
     spins = json.loads((ROOT / "config/spins.json").read_text())
     seeds = load_seeds(ROOT / "data/seeds")
-    log, idx_log = load_log(ROOT / "data/log")
+    log_dir = log_dir or ROOT / "data/log"
+    log, idx_log = load_log(log_dir)
     tickers = sorted(set().union(*[set(s.index) for s in seeds.values()]) | set(log["ticker"].unique()))
     now = now or dt.datetime.now(ET)
     messages = []
@@ -74,29 +90,42 @@ def run(out: Path, fixture: Path | None = None, write_log: bool = True, now: dt.
     # never treat a session that is still trading as a close
     if level.index[-1].date() == now.date() and now.time() < dt.time(16, 30):
         level = level.iloc[:-1]
-    T = level.index[-1]
     grid = close.index.union(level.index)
     close = close.reindex(index=grid, columns=sorted(set(close.columns) | set(tickers)))
     opens = opens.reindex(index=grid)
+
+    # The latest usable close is the last day the index AND nearly all members have prices.
+    # (Late in the evening Yahoo can return the index's bar but not the members'.)
+    T = usable_close(close, level, [t for t in seeds[max(seeds)].index if t in close.columns])
+    if T < level.index[-1]:
+        print(f"note: member prices for {level.index[-1].date()} not available yet; using {T.date()}")
+    level = level.loc[:T]
+    last_logged = pd.Timestamp(log["date"].max()) if not log.empty else None
+    if last_logged is not None and T < last_logged:
+        raise NotPublished(f"fresh data ends {T.date()}, already published through {last_logged.date()}")
     adj, spin_applied = A.adjust_for_spins(close, opens, spins)
 
     # Log newly closed days. The latest close is always recomputed, so a later run the same
-    # evening replaces the first run's numbers with any corrected closing prices.
+    # evening replaces the first run's numbers with any corrected closing prices; a day is
+    # only replaced once its recomputation has succeeded.
     L = min(seeds)
-    log, idx_log = trim_log(log, idx_log, T)
-    last = pd.Timestamp(log["date"].max()) if not log.empty else L
+    base, _ = trim_log(log, idx_log, T)
+    last = pd.Timestamp(base["date"].max()) if not base.empty else L
     todo = [d for d in level.index if last < d <= T]
     new_idx = pd.DataFrame()
     if todo:
         new_rows, new_idx, problems = A.log_days(adj, level, seeds, todo)
         messages += problems
         if not new_rows.empty:
-            log = pd.concat([log, new_rows], ignore_index=True)
-            idx_log = pd.concat([idx_log, new_idx], ignore_index=True)
+            done = set(new_idx["date"])
+            log = pd.concat([log[~log["date"].astype(str).isin(done)], new_rows], ignore_index=True)
+            idx_log = pd.concat([idx_log[~idx_log["date"].astype(str).isin(done)], new_idx], ignore_index=True)
+            log = log.sort_values("date", kind="stable", ignore_index=True)
+            idx_log = idx_log.sort_values("date", kind="stable", ignore_index=True)
             if write_log:
-                (ROOT / "data/log").mkdir(parents=True, exist_ok=True)
-                log.to_csv(ROOT / "data/log/daily_contrib.csv", index=False, float_format="%.6f")
-                idx_log.to_csv(ROOT / "data/log/daily_index.csv", index=False, float_format="%.4f")
+                log_dir.mkdir(parents=True, exist_ok=True)
+                log.to_csv(log_dir / "daily_contrib.csv", index=False, float_format="%.6f")
+                idx_log.to_csv(log_dir / "daily_index.csv", index=False, float_format="%.4f")
     for _, r in new_idx.iterrows():
         gap = (r["close"] - r["prev_close"]) - r["attributed"]
         if abs(gap) / r["prev_close"] * 1e4 > RECON_BP:
@@ -163,16 +192,24 @@ def main():
     ap.add_argument("--fixture", default=None)
     ap.add_argument("--no-log-write", action="store_true")
     a = ap.parse_args()
-    data = run(Path(a.out), Path(a.fixture) if a.fixture else None, write_log=not a.no_log_write)
+    gh = os.environ.get("GITHUB_OUTPUT")
+    try:
+        data = run(Path(a.out), Path(a.fixture) if a.fixture else None, write_log=not a.no_log_write)
+    except NotPublished as e:
+        print(f"not publishing: {e}")
+        if gh:
+            with open(gh, "a") as f:
+                f.write("publish=false\nstatus=ok\nmessages<<EOF\n\nEOF\n")
+        return
     m = data["meta"][0]
     print(f"as of {m['asOf']}: status {m['status']}")
     for x in m["messages"]:
         print("  -", x)
     for r in data["index_moves"]:
         print(f"  {r['period']:>3}  {r['change']:+10.2f}  sum {r['constituentSum']:+10.2f}  other {r['residual']:+8.2f}")
-    gh = os.environ.get("GITHUB_OUTPUT")
     if gh:
         with open(gh, "a") as f:
+            f.write("publish=true\n")
             f.write(f"status={m['status']}\n")
             f.write("messages<<EOF\n" + "\n".join(m["messages"]) + "\nEOF\n")
 

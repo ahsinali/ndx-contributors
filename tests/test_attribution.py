@@ -4,6 +4,7 @@
 """
 import datetime as dt
 import json
+import shutil
 from pathlib import Path
 
 import pandas as pd
@@ -39,7 +40,7 @@ def test_spin_adjustment_only_where_feed_is_unadjusted():
 
 
 def test_reproduces_published_numbers(tmp_path):
-    data = build.run(tmp_path, fixture=FIX, write_log=False, now=NOW)
+    data = build.run(tmp_path, fixture=FIX, write_log=False, now=NOW, log_dir=tmp_path / "log")
     exp = json.loads((FIX / "expected.json").read_text())
     got = {(r["period"], r["ticker"]): r for r in data["contributions"]}
     for r in exp["contributions"]:
@@ -92,3 +93,27 @@ def test_rerun_same_evening_replaces_latest_day():
     assert not problems and len(merged) == len(log)
     pick = lambda df: df[(df["date"] == "2026-10-21") & (df["ticker"] == "NVDA")]["points"]
     assert len(pick(merged)) == 1 and pick(merged).iloc[0] > pick(log).iloc[0]
+
+
+def test_latest_day_needs_member_prices():
+    """Late in the evening Yahoo can return the index's bar without the members': that day
+    is not used."""
+    close, _, level = build.load_fixture(FIX)
+    members = list(close.columns)
+    assert build.usable_close(close, level, members) == pd.Timestamp("2026-10-21")
+    close.loc[pd.Timestamp("2026-10-21")] = float("nan")
+    assert build.usable_close(close, level, members) == pd.Timestamp("2026-10-20")
+
+
+def test_never_publishes_older_than_the_log(tmp_path):
+    fx = tmp_path / "fx"
+    shutil.copytree(FIX, fx)
+    close = pd.read_csv(fx / "close.csv", index_col=0, parse_dates=True)
+    close.loc[pd.Timestamp("2026-10-21")] = float("nan")
+    close.to_csv(fx / "close.csv")
+    logd = tmp_path / "log"
+    logd.mkdir()
+    pd.DataFrame([{"date": "2026-10-21", "ticker": "NVDA", "points": 1.0}]).to_csv(logd / "daily_contrib.csv", index=False)
+    with pytest.raises(build.NotPublished):
+        build.run(tmp_path / "out", fixture=fx, write_log=False, now=NOW, log_dir=logd)
+    assert not (tmp_path / "out" / "index.html").exists()
