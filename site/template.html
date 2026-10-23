@@ -231,9 +231,9 @@ function nxRender() {
     if (!mv) { el.textContent = '—'; return; }
     const v = Number(mv[f]);
     if (f === 'endLevel' || f === 'startLevel') el.textContent = fmtLvl(v);
-    else if (f === 'changePct') { el.textContent = fmtPct2(v); el.classList.add(sign(v)); }
+    else if (f === 'changePct') { el.textContent = fmtPct2(v); if (sign(v)) el.classList.add(sign(v)); }
     else if (f === 'advancers' || f === 'decliners') el.textContent = d3.format(',')(v);
-    else { el.textContent = fmtPts(v); if (f === 'change') el.classList.add(sign(v)); }
+    else { el.textContent = fmtPts(v); if (f === 'change' && sign(v)) el.classList.add(sign(v)); }
   });
   document.querySelectorAll('.nx-big').forEach((el) => el.classList.remove('dash-skeleton'));
   document.getElementById('nx-period-name').textContent = mv ? mv.label : '—';
@@ -253,13 +253,24 @@ function nxRender() {
     const lead0 = { '1D': 'On the day', '1W': 'Over the past week', '1M': 'Over the past month', 'YTD': 'So far this year', '1Y': 'Over the past year' }[per] || mv.label;
     const parts = [lead0 + ' the index moved ',
       mk('index_moves', 'change', 'period=' + per, fmtPts(Number(mv.change)), sign(Number(mv.change))), ' points (',
-      mk('index_moves', 'changePct', 'period=' + per, fmtPct2(Number(mv.changePct)), sign(Number(mv.changePct))), '). ',
-      (up ? 'Most of the lift came from ' : 'Most of the drop came from ')];
-    lead.forEach((r, i) => {
-      parts.push(r.ticker + ' (', mk('contributions', 'points', 'period=' + per + '&ticker=' + encodeURIComponent(r.ticker), fmtPts(r.points), sign(r.points)), ')');
-      parts.push(i < lead.length - 2 ? ', ' : i === lead.length - 2 ? ' and ' : '. ');
+      mk('index_moves', 'changePct', 'period=' + per, fmtPct2(Number(mv.changePct)), sign(Number(mv.changePct))), '). '];
+    const cite = (r) => mk('contributions', 'points', 'period=' + per + '&ticker=' + encodeURIComponent(r.ticker), fmtPts(r.points), sign(r.points));
+    const list = (rs, end) => rs.forEach((r, i) => {
+      parts.push(r.ticker + ' (', cite(r), ')');
+      parts.push(i < rs.length - 2 ? ', ' : i === rs.length - 2 ? ' and ' : end);
     });
-    if (drag) parts.push('The biggest ' + (up ? 'drag' : 'offset') + ' was ' + drag.ticker + ' (', mk('contributions', 'points', 'period=' + per + '&ticker=' + encodeURIComponent(drag.ticker), fmtPts(drag.points), sign(drag.points)), ').');
+    if (Math.abs(Number(mv.changePct)) < 0.1) {
+      // a flat period: the story is the offsetting moves, not a direction
+      const gain = rows.filter((r) => r.points > 0).sort((a, b) => b.points - a.points).slice(0, 3);
+      const loss = rows.filter((r) => r.points < 0).sort((a, b) => a.points - b.points).slice(0, 3);
+      if (gain.length && loss.length) {
+        parts.push('Gains in '); list(gain, ' were offset by losses in '); list(loss, '.');
+      }
+    } else {
+      parts.push(up ? 'Most of the lift came from ' : 'Most of the drop came from ');
+      list(lead, '. ');
+      if (drag) parts.push('The biggest ' + (up ? 'drag' : 'offset') + ' was ' + drag.ticker + ' (', cite(drag), ').');
+    }
     tk.replaceChildren(...parts.map((p) => (typeof p === 'string' ? document.createTextNode(p) : p)));
   } else tk.textContent = '—';
 
