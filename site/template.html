@@ -108,14 +108,14 @@ body { margin: 0; background: var(--color-bg); color: var(--color-fg); -webkit-t
   </section>
 
   <section class="nx-card" id="chart">
-    <h2>Biggest contributors, in index points</h2>
+    <h2>Biggest contributors in index points · <span class="nx-per-label">—</span></h2>
     <p class="nx-note">The 20 largest moves by size. Bars right of the line added to the index; bars left of it subtracted.</p>
     <div class="nx-chart dash-skeleton" id="nx-chart" data-source="contributions"></div>
   </section>
 
   <section class="nx-card" id="table">
-    <h2>Top 50 contributors</h2>
-    <p class="nx-note">Ranked by size of contribution. Points are index points; index % is the share of the index's return in percentage points; share is the stock's slice of the index's move (negative means it worked against the move). Tap a header to sort.</p>
+    <h2>Top 50 contributors · <span class="nx-per-label">—</span></h2>
+    <p class="nx-note">Ranked by size of contribution. Index pts is the stock's contribution in index points; stock % is the stock's own price change over the period; index % is the share of the index's return in percentage points; share is the stock's slice of the index's move (negative means it worked against the move). Tap a header to sort.</p>
     <div class="nx-tools"><input id="nx-search" type="search" placeholder="Filter by ticker or name" aria-label="Filter by ticker or name"></div>
     <div class="nx-scroll">
       <table class="nx-table" data-source="contributions" data-row-key="period,ticker">
@@ -123,7 +123,7 @@ body { margin: 0; background: var(--color-bg); color: var(--color-fg); -webkit-t
           <th data-field="rank" data-k="rank"><button>#</button></th>
           <th class="nx-l" data-field="ticker" data-k="ticker"><button>Ticker</button></th>
           <th class="nx-l nx-hide-sm" data-field="name" data-k="name"><button>Name</button></th>
-          <th data-field="points" data-k="points"><button>Points</button></th>
+          <th data-field="points" data-k="points"><button>Index pts</button></th>
           <th class="nx-hide-xs" data-field="indexPctPts" data-k="indexPctPts"><button>Index %</button></th>
           <th class="nx-hide-sm" data-field="shareOfMove" data-k="shareOfMove"><button>Share</button></th>
           <th data-field="stockReturnPct" data-k="stockReturnPct"><button>Stock %</button></th>
@@ -237,6 +237,7 @@ function nxRender() {
   });
   document.querySelectorAll('.nx-big').forEach((el) => el.classList.remove('dash-skeleton'));
   document.getElementById('nx-period-name').textContent = mv ? mv.label : '—';
+  document.querySelectorAll('.nx-per-label').forEach((el) => { el.textContent = mv ? mv.label.toLowerCase() : '—'; });
   document.getElementById('nx-asof').textContent = mv ? 'Close of ' + fmtDate(mv.startDate) + ' to close of ' + fmtDate(mv.endDate) : '—';
 
   const rows = okC ? C.data.filter((r) => r.period === per).map((r) => ({ ...r, rank: Number(r.rank), points: Number(r.points), indexPctPts: Number(r.indexPctPts), shareOfMove: Number(r.shareOfMove), stockReturnPct: r.stockReturnPct == null ? null : Number(r.stockReturnPct), weightPct: Number(r.weightPct) })) : [];
