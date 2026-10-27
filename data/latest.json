@@ -1,11 +1,14 @@
 {
  "meta": {
   "asOf": "2026-10-23",
-  "generatedAt": "2026-10-23 19:56 EDT",
+  "generatedAt": "2026-10-26 20:00 EDT",
   "logStart": "2026-10-21",
   "seedDate": "2026-10-21",
-  "status": "ok",
-  "messages": [],
+  "status": "warn",
+  "messages": [
+   "2026-10-23: no price for META; day not logged",
+   "No closing price for META on 2026-10-23."
+  ],
   "spinAdjustments": [],
   "source": "Yahoo Finance"
  },
@@ -36,9 +39,9 @@
    "endLevel": 28957.53,
    "change": -230.02,
    "changePct": -0.79,
-   "constituentSum": -229.83,
-   "residual": -0.19,
-   "top50Sum": -223.71,
+   "constituentSum": -213.55,
+   "residual": -16.47,
+   "top50Sum": -207.43,
    "advancers": 53,
    "decliners": 48
   },
@@ -52,9 +55,9 @@
    "endLevel": 28957.53,
    "change": -1512.76,
    "changePct": -4.96,
-   "constituentSum": -1495.49,
-   "residual": -17.27,
-   "top50Sum": -1563.01,
+   "constituentSum": -1431.27,
+   "residual": -81.49,
+   "top50Sum": -1498.78,
    "advancers": 52,
    "decliners": 49
   },
@@ -68,9 +71,9 @@
    "endLevel": 28957.53,
    "change": 3707.68,
    "changePct": 14.68,
-   "constituentSum": 3725.39,
-   "residual": -17.71,
-   "top50Sum": 3575.74,
+   "constituentSum": 3673.78,
+   "residual": 33.9,
+   "top50Sum": 3524.68,
    "advancers": 61,
    "decliners": 40
   },
@@ -84,9 +87,9 @@
    "endLevel": 28957.53,
    "change": 3860.12,
    "changePct": 15.38,
-   "constituentSum": 3803.42,
-   "residual": 56.7,
-   "top50Sum": 3826.69,
+   "constituentSum": 3853.72,
+   "residual": 6.4,
+   "top50Sum": 3876.99,
    "advancers": 58,
    "decliners": 43
   }
@@ -117,7 +120,7 @@
   "1W": [
    {
     "ticker": "META",
-    "points": -91.98
+    "points": -75.69
    },
    {
     "ticker": "GOOGL",
@@ -154,8 +157,8 @@
     "points": -164.23
    },
    {
-    "ticker": "META",
-    "points": -139.92
+    "ticker": "LRCX",
+    "points": -123.79
    }
   ],
   "YTD": [
