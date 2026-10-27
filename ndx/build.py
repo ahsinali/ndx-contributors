@@ -48,6 +48,52 @@ def trim_log(log: pd.DataFrame, idx_log: pd.DataFrame, T: pd.Timestamp):
     return keep(log), keep(idx_log)
 
 
+INDEX_COL = "^NDX"
+CACHE_DAYS = 10         # recent closes kept in data/log/closes.csv
+CACHE_TOL = 0.005       # cached and fresh closes must agree within 0.5% to trust the cache for a stock
+
+
+def load_cache(folder: Path) -> pd.DataFrame:
+    p = folder / "closes.csv"
+    return pd.read_csv(p, index_col=0, parse_dates=True) if p.exists() else pd.DataFrame()
+
+
+def fill_from_cache(close: pd.DataFrame, level: pd.Series, cache: pd.DataFrame):
+    """Fill closes Yahoo left out with ones saved by earlier runs.
+
+    Only recent days are cached, and a stock is filled only if its cached and fresh closes
+    agree on every day both have (so a split or other restatement is never mixed in).
+    """
+    if cache.empty:
+        return close, level, []
+    fresh = close.copy()
+    fresh[INDEX_COL] = level
+    fresh = fresh.reindex(fresh.index.union(cache.index))
+    filled = []
+    for t in cache.columns:
+        if t not in fresh.columns:
+            continue
+        c, f = cache[t].dropna(), fresh[t]
+        both = c.index.intersection(f.dropna().index)
+        if len(both) and ((f[both] / c[both] - 1).abs() > CACHE_TOL).any():
+            continue
+        gaps = c.index[f.reindex(c.index).isna()]
+        if len(gaps):
+            fresh.loc[gaps, t] = c[gaps]
+            filled += [f"{t} {d.date()}" for d in gaps]
+    level = fresh.pop(INDEX_COL)
+    return fresh, level, filled
+
+
+def save_cache(folder: Path, close: pd.DataFrame, level: pd.Series):
+    days = level.dropna().index[-CACHE_DAYS:]
+    out = close.loc[days].copy()
+    out[INDEX_COL] = level.loc[days]
+    folder.mkdir(parents=True, exist_ok=True)
+    out.index.name = "date"
+    out.to_csv(folder / "closes.csv", float_format="%.4f", date_format="%Y-%m-%d")
+
+
 def load_fixture(folder: Path):
     close = pd.read_csv(folder / "close.csv", index_col=0, parse_dates=True)
     opens = pd.read_csv(folder / "open.csv", index_col=0, parse_dates=True)
@@ -86,6 +132,9 @@ def run(out: Path, fixture: Path | None = None, write_log: bool = True, now: dt.
         start = (now.date() - dt.timedelta(days=440)).isoformat()
         close, opens, level = fetch(tickers, start)
 
+    close, level, filled = fill_from_cache(close, level, load_cache(log_dir))
+    if filled:
+        print("note: filled from saved closes: " + ", ".join(filled))
     level = level.dropna()
     # never treat a session that is still trading as a close
     if level.index[-1].date() == now.date() and now.time() < dt.time(16, 30):
@@ -167,12 +216,13 @@ def run(out: Path, fixture: Path | None = None, write_log: bool = True, now: dt.
     meta = [{"asOf": T.date().isoformat(), "generatedAt": now.strftime("%Y-%m-%d %H:%M %Z"),
              "logStart": L.date().isoformat(), "seedDate": max(seeds).date().isoformat(),
              "status": "warn" if messages else "ok", "messages": messages,
-             "spinAdjustments": spin_applied, "source": "fixture" if fixture else "Yahoo Finance"}]
+             "spinAdjustments": spin_applied, "filledFromCache": filled, "source": "fixture" if fixture else "Yahoo Finance"}]
     data = {"meta": meta, "index_moves": moves, "contributions": contrib}
     render(data, out)
     if write_log:
         top = {k: [{"ticker": c["ticker"], "points": c["points"]} for c in contrib if c["period"] == k][:5] for k in order}
-        (ROOT / "data/latest.json").write_text(json.dumps({"meta": meta[0], "index_moves": moves, "top5": top}, indent=1))
+        save_cache(log_dir, close, level)
+        (log_dir.parent / "latest.json").write_text(json.dumps({"meta": meta[0], "index_moves": moves, "top5": top}, indent=1))
     return data
 
 

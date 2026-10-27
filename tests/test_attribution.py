@@ -117,3 +117,34 @@ def test_never_publishes_older_than_the_log(tmp_path):
     with pytest.raises(build.NotPublished):
         build.run(tmp_path / "out", fixture=fx, write_log=False, now=NOW, log_dir=logd)
     assert not (tmp_path / "out" / "index.html").exists()
+
+
+def test_fill_from_cache_skips_restated_history():
+    idx = pd.to_datetime(["2026-10-20", "2026-10-21"])
+    cache = pd.DataFrame({"AAA": [100.0, 101.0], "BBB": [50.0, 51.0], "^NDX": [1000.0, 1010.0]}, index=idx)
+    fresh = pd.DataFrame({"AAA": [100.0, float("nan")], "BBB": [25.0, float("nan")]}, index=idx)  # BBB split 2:1
+    level = pd.Series([1000.0, 1010.0], index=idx)
+    close, lvl, filled = build.fill_from_cache(fresh, level, cache)
+    assert close.loc[idx[1], "AAA"] == 101.0 and filled == ["AAA 2026-10-21"]
+    assert pd.isna(close.loc[idx[1], "BBB"])
+
+
+def test_missing_price_is_filled_from_earlier_run(tmp_path):
+    """A price Yahoo drops on a later run is taken from the closes the earlier run saved,
+    so the page doesn't raise a false alarm or show a wrong return."""
+    logd = tmp_path / "log"
+    build.run(tmp_path / "o1", fixture=FIX, write_log=True, now=NOW, log_dir=logd)
+    assert (logd / "closes.csv").exists() and (tmp_path / "latest.json").exists()
+
+    fx = tmp_path / "fx"
+    shutil.copytree(FIX, fx)
+    close = pd.read_csv(fx / "close.csv", index_col=0, parse_dates=True)
+    close.loc[pd.Timestamp("2026-10-21"), "META"] = float("nan")
+    close.to_csv(fx / "close.csv")
+    d = build.run(tmp_path / "o2", fixture=fx, write_log=True, now=NOW, log_dir=logd)
+    m = d["meta"][0]
+    assert m["status"] == "ok" and m["filledFromCache"] == ["META 2026-10-21"]
+    exp = {(r["period"], r["ticker"]): r for r in json.loads((FIX / "expected.json").read_text())["contributions"]}
+    got = {(r["period"], r["ticker"]): r for r in d["contributions"]}
+    for k in ["1D", "1W", "YTD"]:
+        assert got[(k, "META")]["stockReturnPct"] == pytest.approx(exp[(k, "META")]["stockReturnPct"], abs=0.01)

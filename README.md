@@ -17,6 +17,8 @@ any price corrections. Each run:
 1. Runs the engine tests (`tests/`, offline fixture of real Oct 2026 closes).
 2. Pulls ~15 months of closes for every member plus `^NDX` from Yahoo Finance.
 3. Recomputes the latest close and appends any newly closed days to `data/log/`, then commits it.
+   The last 10 days of closes are saved in `data/log/closes.csv`; a price Yahoo leaves out on a
+   later run is filled from there (only if the stock's saved and fresh prices agree elsewhere).
 4. Rebuilds the page and publishes it to GitHub Pages.
 5. Fails the `reconcile` job (so GitHub notifies you) if the contributions don't add up to the
    index move within 5 bp, or if prices are missing or stale. The page still publishes, with a
