@@ -1,14 +1,11 @@
 {
  "meta": {
   "asOf": "2026-10-23",
-  "generatedAt": "2026-10-26 20:00 EDT",
+  "generatedAt": "2026-10-26 20:42 EDT",
   "logStart": "2026-10-21",
   "seedDate": "2026-10-21",
-  "status": "warn",
-  "messages": [
-   "2026-10-23: no price for META; day not logged",
-   "No closing price for META on 2026-10-23."
-  ],
+  "status": "ok",
+  "messages": [],
   "spinAdjustments": [],
   "source": "Yahoo Finance"
  },
@@ -23,9 +20,9 @@
    "endLevel": 28957.53,
    "change": -1.16,
    "changePct": -0.0,
-   "constituentSum": -2.21,
-   "residual": 1.05,
-   "top50Sum": 15.38,
+   "constituentSum": -2.17,
+   "residual": 1.01,
+   "top50Sum": 15.42,
    "advancers": 33,
    "decliners": 67
   },
@@ -39,9 +36,9 @@
    "endLevel": 28957.53,
    "change": -230.02,
    "changePct": -0.79,
-   "constituentSum": -213.55,
-   "residual": -16.47,
-   "top50Sum": -207.43,
+   "constituentSum": -229.8,
+   "residual": -0.22,
+   "top50Sum": -223.68,
    "advancers": 53,
    "decliners": 48
   },
@@ -55,9 +52,9 @@
    "endLevel": 28957.53,
    "change": -1512.76,
    "changePct": -4.96,
-   "constituentSum": -1431.27,
-   "residual": -81.49,
-   "top50Sum": -1498.78,
+   "constituentSum": -1495.46,
+   "residual": -17.3,
+   "top50Sum": -1562.97,
    "advancers": 52,
    "decliners": 49
   },
@@ -71,9 +68,9 @@
    "endLevel": 28957.53,
    "change": 3707.68,
    "changePct": 14.68,
-   "constituentSum": 3673.78,
-   "residual": 33.9,
-   "top50Sum": 3524.68,
+   "constituentSum": 3725.42,
+   "residual": -17.74,
+   "top50Sum": 3575.77,
    "advancers": 61,
    "decliners": 40
   },
@@ -87,9 +84,9 @@
    "endLevel": 28957.53,
    "change": 3860.12,
    "changePct": 15.38,
-   "constituentSum": 3853.72,
-   "residual": 6.4,
-   "top50Sum": 3876.99,
+   "constituentSum": 3803.45,
+   "residual": 56.67,
+   "top50Sum": 3826.72,
    "advancers": 58,
    "decliners": 43
   }
@@ -120,7 +117,7 @@
   "1W": [
    {
     "ticker": "META",
-    "points": -75.69
+    "points": -91.98
    },
    {
     "ticker": "GOOGL",
@@ -157,8 +154,8 @@
     "points": -164.23
    },
    {
-    "ticker": "LRCX",
-    "points": -123.79
+    "ticker": "META",
+    "points": -139.92
    }
   ],
   "YTD": [
@@ -172,7 +169,7 @@
    },
    {
     "ticker": "AAPL",
-    "points": 516.44
+    "points": 516.48
    },
    {
     "ticker": "INTC",
@@ -190,7 +187,7 @@
    },
    {
     "ticker": "AAPL",
-    "points": 600.04
+    "points": 600.07
    },
    {
     "ticker": "AMD",
