@@ -1,7 +1,7 @@
 {
  "meta": {
   "asOf": "2026-11-16",
-  "generatedAt": "2026-11-16 23:43 EST",
+  "generatedAt": "2026-11-17 21:32 EST",
   "logStart": "2026-10-21",
   "seedDate": "2026-10-21",
   "status": "ok",
@@ -70,7 +70,7 @@
    "change": 1947.3,
    "changePct": 7.71,
    "constituentSum": 1981.85,
-   "residual": -34.54,
+   "residual": -34.55,
    "top50Sum": 1926.17,
    "advancers": 58,
    "decliners": 43
