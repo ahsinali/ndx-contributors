@@ -1,13 +1,22 @@
 {
  "meta": {
   "asOf": "2026-11-18",
-  "generatedAt": "2026-11-18 21:44 EST",
+  "generatedAt": "2026-11-18 22:47 EST",
   "logStart": "2026-10-21",
   "seedDate": "2026-10-21",
   "status": "ok",
   "messages": [],
   "spinAdjustments": [],
-  "filledFromCache": [],
+  "filledFromCache": [
+   "SNDK 2026-11-05",
+   "SNDK 2026-11-06",
+   "SNDK 2026-11-09",
+   "SNDK 2026-11-10",
+   "SNDK 2026-11-11",
+   "SNDK 2026-11-12",
+   "SNDK 2026-11-13",
+   "SNDK 2026-11-16"
+  ],
   "source": "Yahoo Finance"
  },
  "index_moves": [
@@ -21,11 +30,11 @@
    "endLevel": 27116.26,
    "change": 114.48,
    "changePct": 0.42,
-   "constituentSum": 113.74,
-   "residual": 0.74,
-   "top50Sum": 113.7,
+   "constituentSum": 118.44,
+   "residual": -3.96,
+   "top50Sum": 117.23,
    "advancers": 48,
-   "decliners": 53
+   "decliners": 52
   },
   {
    "period": "1W",
@@ -37,9 +46,9 @@
    "endLevel": 27116.26,
    "change": -1257.99,
    "changePct": -4.43,
-   "constituentSum": -1254.5,
-   "residual": -3.5,
-   "top50Sum": -1179.55,
+   "constituentSum": -1249.8,
+   "residual": -8.19,
+   "top50Sum": -1175.04,
    "advancers": 15,
    "decliners": 86
   },
@@ -53,9 +62,9 @@
    "endLevel": 27116.26,
    "change": -2071.29,
    "changePct": -7.1,
-   "constituentSum": -2056.25,
-   "residual": -15.04,
-   "top50Sum": -2042.99,
+   "constituentSum": -2066.67,
+   "residual": -4.62,
+   "top50Sum": -2053.71,
    "advancers": 44,
    "decliners": 57
   },
@@ -69,9 +78,9 @@
    "endLevel": 27116.26,
    "change": 1866.41,
    "changePct": 7.39,
-   "constituentSum": 1898.97,
-   "residual": -32.56,
-   "top50Sum": 1825.62,
+   "constituentSum": 1816.07,
+   "residual": 50.34,
+   "top50Sum": 1678.92,
    "advancers": 56,
    "decliners": 45
   },
@@ -85,9 +94,9 @@
    "endLevel": 27116.26,
    "change": 2613.16,
    "changePct": 10.66,
-   "constituentSum": 2599.32,
-   "residual": 13.84,
-   "top50Sum": 2449.69,
+   "constituentSum": 2516.42,
+   "residual": 96.74,
+   "top50Sum": 2306.28,
    "advancers": 56,
    "decliners": 45
   }
@@ -96,111 +105,111 @@
   "1D": [
    {
     "ticker": "AMD",
-    "points": 55.57
+    "points": 55.89
    },
    {
     "ticker": "NVDA",
-    "points": -50.76
+    "points": -51.05
    },
    {
     "ticker": "AMZN",
-    "points": 48.92
+    "points": 49.19
    },
    {
     "ticker": "PANW",
-    "points": 32.06
+    "points": 32.25
    },
    {
     "ticker": "AVGO",
-    "points": 27.38
+    "points": 27.54
    }
   ],
   "1W": [
    {
     "ticker": "NVDA",
-    "points": -256.88
+    "points": -257.17
    },
    {
     "ticker": "MU",
-    "points": -152.98
+    "points": -153.04
    },
    {
     "ticker": "INTC",
-    "points": -49.81
+    "points": -49.82
    },
    {
     "ticker": "AMD",
-    "points": -47.33
+    "points": -47.02
    },
    {
     "ticker": "PLTR",
-    "points": -45.76
+    "points": -45.75
    }
   ],
   "1M": [
    {
     "ticker": "NVDA",
-    "points": -712.39
+    "points": -712.68
    },
    {
     "ticker": "MU",
-    "points": -250.22
+    "points": -250.28
    },
    {
     "ticker": "INTC",
-    "points": -223.75
+    "points": -223.77
    },
    {
     "ticker": "GOOGL",
-    "points": -156.35
+    "points": -156.32
    },
    {
     "ticker": "GOOG",
-    "points": -146.28
+    "points": -146.26
    }
   ],
   "YTD": [
    {
     "ticker": "AMD",
-    "points": 657.7
+    "points": 658.02
    },
    {
     "ticker": "MU",
-    "points": 606.43
+    "points": 606.37
    },
    {
     "ticker": "AAPL",
-    "points": 548.51
+    "points": 548.53
    },
    {
     "ticker": "NVDA",
-    "points": -400.53
+    "points": -400.81
    },
    {
     "ticker": "AMZN",
-    "points": 183.36
+    "points": 183.64
    }
   ],
   "1Y": [
    {
     "ticker": "MU",
-    "points": 688.58
+    "points": 688.52
    },
    {
     "ticker": "AMD",
-    "points": 624.15
+    "points": 624.46
    },
    {
     "ticker": "AAPL",
-    "points": 578.6
+    "points": 578.62
    },
    {
     "ticker": "NVDA",
-    "points": -342.51
+    "points": -342.8
    },
    {
     "ticker": "NFLX",
-    "points": -288.47
+    "points": -288.46
    }
   ]
  }
