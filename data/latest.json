@@ -1,7 +1,7 @@
 {
  "meta": {
   "asOf": "2026-11-23",
-  "generatedAt": "2026-11-23 23:55 EST",
+  "generatedAt": "2026-11-24 00:27 EST",
   "logStart": "2026-10-21",
   "seedDate": "2026-10-21",
   "status": "warn",
@@ -74,7 +74,7 @@
    "change": 1496.25,
    "changePct": 5.93,
    "constituentSum": 1298.92,
-   "residual": 197.32,
+   "residual": 197.33,
    "top50Sum": 1172.3,
    "advancers": 55,
    "decliners": 46
@@ -90,7 +90,7 @@
    "change": 2506.53,
    "changePct": 10.34,
    "constituentSum": 2267.14,
-   "residual": 239.38,
+   "residual": 239.39,
    "top50Sum": 2118.49,
    "advancers": 56,
    "decliners": 45
