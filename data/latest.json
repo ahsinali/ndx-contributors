@@ -1,14 +1,14 @@
 {
  "meta": {
-  "asOf": "2026-11-20",
-  "generatedAt": "2026-11-20 22:24 EST",
+  "asOf": "2026-11-23",
+  "generatedAt": "2026-11-23 23:55 EST",
   "logStart": "2026-10-21",
   "seedDate": "2026-10-21",
   "status": "warn",
   "messages": [
    "2026-11-20: no price for SNDK; day not logged",
-   "1-day contributions miss the index move by -1488.1 pts.",
-   "No closing price for SNDK on 2026-11-20."
+   "1-day contributions miss the index move by +1717.1 pts.",
+   "No closing price for SNDK on 2026-11-23."
   ],
   "spinAdjustments": [],
   "filledFromCache": [],
@@ -19,14 +19,14 @@
    "period": "1D",
    "order": 1,
    "label": "1 day",
-   "startDate": "2026-11-19",
-   "endDate": "2026-11-20",
-   "startLevel": 26517.05,
-   "endLevel": 25028.98,
-   "change": -1488.07,
-   "changePct": -5.61,
+   "startDate": "2026-11-20",
+   "endDate": "2026-11-23",
+   "startLevel": 25028.98,
+   "endLevel": 26746.1,
+   "change": 1717.12,
+   "changePct": 6.86,
    "constituentSum": 0.0,
-   "residual": -1488.07,
+   "residual": 1717.12,
    "top50Sum": 0.0,
    "advancers": 0,
    "decliners": 0
@@ -35,46 +35,46 @@
    "period": "1W",
    "order": 2,
    "label": "1 week",
-   "startDate": "2026-11-13",
-   "endDate": "2026-11-20",
-   "startLevel": 27943.74,
-   "endLevel": 25028.98,
-   "change": -2914.76,
-   "changePct": -10.43,
-   "constituentSum": -1425.92,
-   "residual": -1488.83,
-   "top50Sum": -1293.49,
-   "advancers": 6,
-   "decliners": 95
+   "startDate": "2026-11-16",
+   "endDate": "2026-11-23",
+   "startLevel": 27197.15,
+   "endLevel": 26746.1,
+   "change": -451.05,
+   "changePct": -1.66,
+   "constituentSum": -682.92,
+   "residual": 231.87,
+   "top50Sum": -591.48,
+   "advancers": 13,
+   "decliners": 88
   },
   {
    "period": "1M",
    "order": 3,
    "label": "1 month",
-   "startDate": "2026-10-20",
-   "endDate": "2026-11-20",
-   "startLevel": 29490.28,
-   "endLevel": 25028.98,
-   "change": -4461.3,
-   "changePct": -15.13,
-   "constituentSum": -2956.35,
-   "residual": -1504.95,
-   "top50Sum": -2950.94,
-   "advancers": 38,
-   "decliners": 63
+   "startDate": "2026-10-23",
+   "endDate": "2026-11-23",
+   "startLevel": 28957.53,
+   "endLevel": 26746.1,
+   "change": -2211.43,
+   "changePct": -7.64,
+   "constituentSum": -2426.5,
+   "residual": 215.07,
+   "top50Sum": -2419.99,
+   "advancers": 34,
+   "decliners": 67
   },
   {
    "period": "YTD",
    "order": 4,
    "label": "Year to date",
    "startDate": "2025-12-31",
-   "endDate": "2026-11-20",
+   "endDate": "2026-11-23",
    "startLevel": 25249.85,
-   "endLevel": 25028.98,
-   "change": -220.87,
-   "changePct": -0.87,
+   "endLevel": 26746.1,
+   "change": 1496.25,
+   "changePct": 5.93,
    "constituentSum": 1298.92,
-   "residual": -1519.79,
+   "residual": 197.32,
    "top50Sum": 1172.3,
    "advancers": 55,
    "decliners": 46
@@ -83,17 +83,17 @@
    "period": "1Y",
    "order": 5,
    "label": "1 year",
-   "startDate": "2025-11-20",
-   "endDate": "2026-11-20",
-   "startLevel": 24054.38,
-   "endLevel": 25028.98,
-   "change": 974.6,
-   "changePct": 4.05,
-   "constituentSum": 2432.29,
-   "residual": -1457.69,
-   "top50Sum": 2293.98,
-   "advancers": 59,
-   "decliners": 42
+   "startDate": "2025-11-21",
+   "endDate": "2026-11-23",
+   "startLevel": 24239.57,
+   "endLevel": 26746.1,
+   "change": 2506.53,
+   "changePct": 10.34,
+   "constituentSum": 2267.14,
+   "residual": 239.38,
+   "top50Sum": 2118.49,
+   "advancers": 56,
+   "decliners": 45
   }
  ],
  "top5": {
@@ -122,45 +122,45 @@
   "1W": [
    {
     "ticker": "NVDA",
-    "points": -190.31
-   },
-   {
-    "ticker": "MU",
-    "points": -126.78
-   },
-   {
-    "ticker": "AMD",
-    "points": -93.29
+    "points": -114.61
    },
    {
     "ticker": "MSFT",
-    "points": -88.29
+    "points": -67.96
+   },
+   {
+    "ticker": "PANW",
+    "points": 47.78
    },
    {
     "ticker": "META",
-    "points": -62.66
+    "points": -41.6
+   },
+   {
+    "ticker": "MU",
+    "points": -41.23
    }
   ],
   "1M": [
    {
     "ticker": "NVDA",
-    "points": -794.98
+    "points": -732.79
    },
    {
     "ticker": "MU",
-    "points": -296.49
+    "points": -269.75
    },
    {
     "ticker": "INTC",
-    "points": -228.79
+    "points": -198.68
    },
    {
     "ticker": "GOOGL",
-    "points": -181.8
+    "points": -127.84
    },
    {
-    "ticker": "GOOG",
-    "points": -165.71
+    "ticker": "PLTR",
+    "points": -125.23
    }
   ],
   "YTD": [
@@ -188,23 +188,23 @@
   "1Y": [
    {
     "ticker": "MU",
-    "points": 706.35
+    "points": 697.69
    },
    {
     "ticker": "AMD",
-    "points": 589.5
+    "points": 594.16
    },
    {
     "ticker": "AAPL",
-    "points": 564.66
+    "points": 528.99
    },
    {
     "ticker": "NVDA",
-    "points": -390.56
+    "points": -370.7
    },
    {
     "ticker": "NFLX",
-    "points": -250.94
+    "points": -243.72
    }
   ]
  }
