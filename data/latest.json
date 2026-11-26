@@ -1,7 +1,7 @@
 {
  "meta": {
   "asOf": "2026-11-25",
-  "generatedAt": "2026-11-25 22:42 EST",
+  "generatedAt": "2026-11-25 23:20 EST",
   "logStart": "2026-10-21",
   "seedDate": "2026-10-21",
   "status": "warn",
@@ -11,18 +11,7 @@
    "No closing price for SNDK on 2026-11-25."
   ],
   "spinAdjustments": [],
-  "filledFromCache": [
-   "XEL 2026-11-12",
-   "XEL 2026-11-13",
-   "XEL 2026-11-16",
-   "XEL 2026-11-17",
-   "XEL 2026-11-18",
-   "XEL 2026-11-19",
-   "XEL 2026-11-20",
-   "XEL 2026-11-23",
-   "XEL 2026-11-24",
-   "XEL 2026-11-25"
-  ],
+  "filledFromCache": [],
   "source": "Yahoo Finance"
  },
  "index_moves": [
@@ -84,8 +73,8 @@
    "endLevel": 26046.9,
    "change": 797.05,
    "changePct": 3.16,
-   "constituentSum": 1296.62,
-   "residual": -499.58,
+   "constituentSum": 1298.92,
+   "residual": -501.88,
    "top50Sum": 1172.3,
    "advancers": 55,
    "decliners": 46
@@ -100,11 +89,11 @@
    "endLevel": 26046.9,
    "change": 1028.54,
    "changePct": 4.11,
-   "constituentSum": 1611.38,
-   "residual": -582.84,
+   "constituentSum": 1608.54,
+   "residual": -580.0,
    "top50Sum": 1475.18,
-   "advancers": 54,
-   "decliners": 47
+   "advancers": 53,
+   "decliners": 48
   }
  ],
  "top5": {
